@@ -1,0 +1,313 @@
+//////////////////////////////////////////////////
+//                                              //
+//  Buttons Styling Module                      //
+//  Requires: colors, variables                 //
+//                                              //
+//////////////////////////////////////////////////
+
+.gnv-btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+.gnv-btn {
+  @include transition(all .3s ease-in-out);
+
+  display: inline-flex;
+  align-items: center;
+  border: 0;
+  border-radius: 0;
+  color: $white;
+  font-weight: 400;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.4rem;
+
+  @include media-breakpoint-up(lg) {
+    display: inline-block;
+    width: auto;
+    padding: 1.2rem 1.8rem;
+  }
+
+  @media (max-width: 320px) {
+    padding-right: 0.4rem;
+    padding-left: 0.4rem;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  .gnv-icon {
+    margin-right: 14px;
+    line-height: 1;
+
+    &:before,
+    &:after {
+      @extend %gnv-icomoon-font;
+    }
+
+    &:before,
+    &:after {
+      font-size: 2.4rem;
+    }
+
+    &-download {
+      font-size: 1.7rem;
+
+      &:before {
+        content: '\e90e';
+        font-size: 2.4rem;
+        margin-left: 1rem;
+        vertical-align: middle;
+      }
+    }
+
+    &-facebook {
+
+      @include media-breakpoint-up(lg) {
+        font-size: 2rem;
+      }
+
+      &:before,
+      &:after {
+        font-size: 2.4rem;
+      }
+    }
+
+    &-user {
+      &:before {
+        content: '\e903';
+      }
+    }
+  }
+
+  .gnv-btn__sublabel {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+  }
+
+  &.gnv-btn-small-block {
+    display: block;
+    width: 100%;
+    line-height: 22px;
+    min-width: 230px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    font-size: 18px;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 17px;
+    }
+  }
+
+  &.gnv-btn-small {
+    line-height: 22px;
+    min-width: 228px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    font-size: 18px;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 17px;
+      padding-top: 9px;
+      padding-bottom: 9px;
+    }
+  }
+
+  &.gnv-btn-medium {
+    min-width: 260px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+
+    @include media-breakpoint-down(lg) {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+  }
+
+  &.gnv-btn-large {
+    min-width: 360px;
+  }
+
+  &.gnv-btn-large-block {
+    display: block;
+    width: 100%;
+    line-height: 22px;
+    min-width: 230px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    font-size: 18px;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 17px;
+    }
+  }
+
+  &.gnv-btn-slim {
+    padding-top: 18px;
+    padding-bottom: 18px;
+
+    @include media-breakpoint-down(lg) {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+  }
+
+  &.gnv-btn-square {
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+
+    .gnv-icon {
+      margin-right: 0;
+    }
+  }
+
+  &.gnv-btn-orange {
+    background-color: $orange;
+
+    &:focus,
+    &:hover {
+      background-color: $orange1;
+    }
+
+    &[disabled] {
+      background-color: $gray4;
+      opacity: 1;
+    }
+  }
+
+  &.gnv-btn-white {
+    background-color: $white;
+    color: $orange;
+
+    &:focus,
+    &:hover {
+      background-color: $white;
+      color: $orange;
+    }
+
+    &[disabled] {
+      background-color: $gray4;
+      opacity: 1;
+    }
+  }
+
+  &.gnv-btn-gray {
+    background-color: $gray4;
+
+    &:focus,
+    &:hover {
+      background-color: $gray1;
+    }
+
+    &:disabled {
+      background-color: $gray4;
+    }
+  }
+
+  &.gnv-btn-blu {
+    background-color: $blue4;
+
+    &:focus,
+    &:hover {
+      background-color: $blue4;
+    }
+  }
+
+  &.gnv-btn-light {
+    background-color: rgba($black, .2);
+    border: 2px solid $white;
+    border-radius: 2px;
+
+    @include media-breakpoint-down(lg) {
+      background-color: transparent;
+      border: 0;
+      width: 100%;
+    }
+
+    @include media-breakpoint-down(sm) {
+      text-align: left;
+    }
+
+    .gnv-icon {
+
+      &-from-to,
+      &-to {
+
+        &:before {
+          font-size: 30px;
+
+          @include media-breakpoint-down(lg) {
+            font-size: 33px;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  &.gnv-btn-light-rounded {
+    background-color: rgba($black, .2);
+    border: 2px solid $white;
+    justify-content: center;
+    border-radius: 50px;
+    width: 51px;
+    height: 51px;
+    line-height: 51px;
+    min-width: inherit;
+
+    padding: 1px 0 0 0;
+
+    @include media-breakpoint-down(lg) {
+      background-color: transparent;
+      border: 0;
+      width: 100%;
+    }
+
+    @include media-breakpoint-down(sm) {
+      text-align: left;
+    }
+
+    .gnv-icon {
+      margin: 0;
+    }
+  }
+
+  &.gnv-btn-fb {
+    position: relative;
+    background-color: $facebook-blue;
+
+    .gnv-icon-facebook {
+      float: left;
+
+      &, &:before{
+        font-size: 1.7rem;
+        line-height: 1.8rem;
+      }
+    }
+
+    &:focus,
+    &:hover {
+      background-color: darken($facebook-blue, 10%);
+    }
+  }
+
+  &.gnv-btn-book-now {
+
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: none;
+    color: $white;
+    opacity: .9;
+    outline: 0;
+  }
+}

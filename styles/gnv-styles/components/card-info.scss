@@ -1,0 +1,148 @@
+.sc-card-info {
+  display: flex;
+  color: $gnv-white;
+  padding: 2rem 1.5rem;
+
+  @include media-breakpoint-up(lg) {
+    padding: 2rem;
+  }
+
+  &--icon {
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+
+    i {
+      display: inline;
+      vertical-align: middle;
+      font-size: 7rem;
+      padding-right: 3rem;
+    }
+  }
+
+  &--content {
+    @include media-breakpoint-up(lg) {
+      width: 100%;
+    }
+  }
+
+  h4 {
+    color: $gnv-white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2.2rem;
+    margin-bottom: 0;
+    text-align: left;
+
+    a {
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+
+    @include media-breakpoint-up(sm) {
+      font-size: 2rem;
+    }
+
+    @include media-breakpoint-up(sm) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  hr {
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+      border-top: 1px solid $white;
+      display: block;
+      margin-top: 0.5rem;
+      margin-bottom: 0.7rem;
+    }
+  }
+
+  p {
+    display: block;
+    font-size: 1.4rem;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    margin-top: 1.5rem;
+    word-break: break-word;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 1.6rem;
+      line-height: 2.6rem;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+  }
+
+  //with form
+  .field-validation-error {
+    display: none;
+  }
+
+  .input-validation-error.form-control {
+    &::-webkit-input-placeholder {
+      color: red;
+    }
+
+    &::-moz-placeholder {
+      color: red;
+    }
+
+    &::-ms-placeholder {
+      color: red;
+    }
+
+    &::placeholder {
+      color: red;
+    }
+  }
+
+  // Theme style
+  &.info-theme {
+    background-color: $blue4;
+
+    h4, a {
+      color: $gnv-white;
+    }
+
+    hr {
+      @include media-breakpoint-up(lg) {
+        border-top: 1px solid $gnv-white;
+      }
+    }
+
+    p {
+      color: $gnv-white;
+    }
+
+    i {
+      color: $gnv-white;
+    }
+  }
+
+  &.danger-theme {
+    background-color: $alert-error-light;
+
+    h4, a {
+      color: $alert-error-dark;
+    }
+
+    hr {
+      @include media-breakpoint-up(lg) {
+        border-top: 1px solid $alert-error-dark;
+      }
+    }
+
+    p {
+      color: $gray1;
+    }
+
+    i {
+      color: $alert-error-dark;
+    }
+  }
+}

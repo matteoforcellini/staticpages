@@ -1,0 +1,42 @@
+.sc-offers-carousel {
+  background: url('../../src/assets/images/ferry-offers-bg@2x.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 3.5rem;
+  padding-bottom: 1.2rem;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 5.4rem;
+  }
+
+  .slick-list {
+    @include media-breakpoint-up(sm) {
+      margin: 0 -1.5rem;
+    }
+
+    .slick-slide {
+
+      @include media-breakpoint-down(sm) {
+        padding: 0 1.5rem;
+      }
+    }
+  }
+
+  .slick-dots {
+    bottom: -3rem;
+
+    li.slick-active button {
+      &:before {
+        background-color: $gnv-white;
+      }
+    }
+  }
+
+  .disclaimer {
+    text-align: center;
+    color:$gnv-white;
+    font-size: 1.3rem;
+    letter-spacing: 1.2px;
+  }
+}

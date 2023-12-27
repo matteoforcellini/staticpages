@@ -1,0 +1,117 @@
+.sc-card-pass-content {
+  margin-top: 3rem;
+
+  .card-pass {
+    border: 1px solid $gray8;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 0;
+      padding: 3rem;
+    }
+
+    .card-percent {
+      position: relative;
+      margin: 0 0 4rem;
+
+      @include media-breakpoint-up(lg) {
+        margin: 0 0 8rem;
+      }
+
+      &:before {
+        content: '';
+        background-color: #f2f2f2;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        height: 50px;
+        width: 50px;
+
+        @include media-breakpoint-up(lg) {
+          height: 106px;
+          width: 106px;
+        }
+      }
+
+      img {
+        border-radius: 0;
+        background: transparent;
+        display: inline;
+        width: 40px;
+        overflow: hidden;
+        opacity: 1;
+        visibility: visible;
+        position: relative;
+        padding: 0;
+        vertical-align: middle;
+        transform: translate(6px, 8px);
+
+        @include media-breakpoint-up(lg) {
+          transform: translate(15px, 20px);
+          width: 80px;
+        }
+      }
+
+      .percent-value {
+        float: right;
+        font-size: 35px;
+        font-weight: bold;
+        line-height: unset;
+        margin: 0;
+
+        @include media-breakpoint-up(lg) {
+          font-size: 51px;
+          margin: -20px 0px;
+        }
+      }
+    }
+
+    .card-text {
+
+      .card-title {
+        color: $orange;
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        text-align: left;
+        text-transform: uppercase;
+
+        @include media-breakpoint-up(lg) {
+          font-size: 2rem;
+        }
+
+        p {
+          font-size: 1.4rem;
+          font-weight: 400;
+        }
+      }
+
+      .price {
+        margin-bottom: 0;
+
+        .big {
+          font-size: 18px;
+          font-weight: 700;
+
+          @include media-breakpoint-up(lg) {
+            font-size: 24px;
+          }
+        }
+
+        .small {
+          color: $gray3;
+          font-size: 14px;
+          text-decoration: line-through;
+          margin-left: 10px;
+
+          @include media-breakpoint-up(lg) {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

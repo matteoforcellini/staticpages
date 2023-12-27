@@ -1,0 +1,16 @@
+.headerBanner {
+  position: relative;
+  min-height: 300px;
+  &__bgImg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ0MCIgaGVpZ2h0PSIzNTYiIHZpZXdCb3g9IjAgMCAxNDQwIDM1NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgb3BhY2l0eT0iMC41NCI+CjxwYXRoIGQ9Ik0xNDQwIDBIMFYyNjcuMTI5QzAgMjY3LjEyOSAzODIgMjU0LjUyOCA3MzEgMzEyLjk5NEMxMDgwIDM3MS40NTkgMTQ0MCAzNTIuODExIDE0NDAgMzUyLjgxMVYwWiIgZmlsbD0idXJsKCNwYWludDBfbGluZWFyXzQyODBfNTgyMzMpIiBzdHlsZT0ibWl4LWJsZW5kLW1vZGU6c2NyZWVuIi8+CjwvZz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQwX2xpbmVhcl80MjgwXzU4MjMzIiB4MT0iLTAuMDY1NjYzNSIgeTE9IjIwNC43MDYiIHgyPSIxNDQwIiB5Mj0iMjA0LjcwNiIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBzdG9wLWNvbG9yPSIjMDA0N0JBIi8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzAwNDdCQSIgc3RvcC1vcGFjaXR5PSIwIi8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPC9zdmc+Cg==);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    &.--under {
+      z-index: -2;
+    }
+  }
+}

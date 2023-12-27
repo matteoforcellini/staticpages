@@ -1,0 +1,232 @@
+div.push-component {
+  .pushComponent {
+    background-color: $gray-blue;
+    padding: 1rem;
+    display: flex;
+    width: 100%;
+
+    &__iconCol {
+      width: 40px;
+      padding-top: 10px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      .pushComponent__bodyCol {
+        width: calc(60% - 200px);
+      }
+
+      .pushComponent__buttonCol {
+        width: 200px;
+        margin-top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+      }
+    }
+
+    &.--withImage {
+      padding: 0;
+
+      @include media-breakpoint-up(lg) {
+        & .pushComponent__headingCol {
+          width: 35%;
+        }
+
+        & .pushComponent__bodyCol {
+          width: calc(65% - 200px);
+          padding-left: 1.25rem !important;
+        }
+      }
+
+      & .pushComponent__bodyCol {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        text-align: left;
+        align-items: start;
+        justify-content: center;
+      }
+
+      & .pushComponent__text {
+        margin-top: .5rem;
+      }
+
+      & .pushComponent__buttonCol {
+        padding: 1rem;
+      }
+    }
+
+    &.--withIcon {
+
+      .pushComponent__headingCol {
+        width: calc(100% - 40px);
+      }
+
+      .pushComponent__bodyCol {
+        padding-left: 40px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        .pushComponent__headingCol {
+          width: calc(40% - 40px);
+        }
+      }
+    }
+
+    &__headingCol {
+      width: 100%;
+
+      @include media-breakpoint-up(lg) {
+        width: 40%;
+      }
+    }
+
+    &__bodyCol {
+      width: 100%;
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+
+      @include media-breakpoint-up(lg) {
+        margin-top: 0;
+      }
+    }
+
+    &__buttonCol {
+      width: 100%;
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    &.--withImage {
+      .bannerSc__col:first-of-type {
+        padding: 0;
+      }
+    }
+
+    &__headingWrapper {
+      &:not(.--withHeadingIcon) {
+        padding-left: 20px;
+      }
+
+      &.--withHeadingIcon {
+        .bannerSc__subHeadingRow {
+          padding-left: 35px;
+        }
+      }
+    }
+
+
+    &__headingText {
+      color: $dark-medium;
+      font-weight: bold;
+      font-size: 2.2rem;
+
+      @include media-breakpoint-up(md) {
+        font-size: 2.4rem;
+      }
+    }
+
+    &__subHeadingText {
+      font-size: 2.0rem;
+      color: $dark-medium;
+    }
+
+    &__headingIcon {
+      color: $dark-medium;
+      font-size: 3.5rem;
+      width: 35px;
+      display: block;
+    }
+
+    &__text {
+      color: $light-gray;
+      margin: 0;
+      line-height: 1.35;
+      font-size: 1.6rem;
+    }
+
+    &__ul {
+      display: block;
+      margin: 0;
+      padding: 0;
+
+      @include media-breakpoint-up(md) {
+        padding-left: 0;
+      }
+
+      li {
+        list-style: none;
+        line-height: 1.3;
+        padding: .35em 0;
+        color: $light-gray;
+        font-size: 1.6rem;
+      }
+
+      &.--gnvCheckMarks {
+        li {
+          position: relative;
+          display: flex;
+
+          &:before {
+            content: $gnv-icon-check;
+            font-family: 'gnv-icons';
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            font-size: 1.6rem;
+            margin-right: .75em;
+            color: $orange3;
+            //background-color: var(--orange);
+            padding: 2px;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            text-align: center;
+            margin-top: 4px;
+          }
+        }
+      }
+    }
+
+    &__button {
+      background-color: $orange3;
+      border-radius: 1px;
+      color: #fff;
+      font-size: 1.6rem;
+      font-weight: 400;
+      padding: 10px 20px;
+      min-width: 150px;
+      text-transform: uppercase;
+      transition: all .3s ease-in-out;
+      align-items: center;
+      display: inline-block;
+
+      &:not(.disabled), &:not(:disabled) {
+        cursor: pointer;
+      }
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    &__col {
+      display: flex;
+      align-items: center;
+
+      &.--withImage {
+        padding: 0;
+      }
+    }
+
+    &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+}

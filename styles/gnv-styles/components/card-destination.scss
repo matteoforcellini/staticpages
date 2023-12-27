@@ -1,0 +1,63 @@
+.sc-card-destination {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+  min-height: 33.3rem;
+  z-index: 0;
+
+  &--txt {
+    z-index: 2;
+    bottom: 2rem;
+    left: 3rem;
+    position: absolute;
+
+    .card-title {
+      @extend .gnv-txt--white;
+
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 0.63;
+      text-align: left;
+
+      @include media-breakpoint-up(lg) {
+        line-height: 0.78;
+      }
+    }
+
+    .card-description {
+      @extend .gnv-txt--white;
+
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 1.39;
+      letter-spacing: 0.7px;
+      margin-top: 1.2rem;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 1.8rem;
+        line-height: 1.39;
+        letter-spacing: 0.8px;
+      }
+    }
+
+    .card-route {
+      @extend .gnv-txt--orange;
+
+      font-size: 1.6rem;
+      font-weight: 700;
+      line-height: 1.94;
+      letter-spacing: 0.5px;
+      margin-top: 1.4rem;
+      margin-bottom: 0;
+      text-transform: uppercase;
+      text-align: left;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 2rem;
+        line-height: 1.55;
+        letter-spacing: 0.6px;
+      }
+    }
+  }
+}

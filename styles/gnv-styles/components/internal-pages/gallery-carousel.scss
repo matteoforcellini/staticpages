@@ -1,0 +1,136 @@
+.sc-gallery-carousel {
+
+  .slick-slide {
+    padding: 0;
+  }
+
+  .slick-next,
+  .slick-prev {
+
+    &:before {
+      color: $orange;
+      padding: 1.2rem;
+    }
+  }
+
+  .image-container {
+    cursor: pointer;
+    margin-bottom: 1rem;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 1.5rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 3rem;
+    }
+
+    img {
+      margin: 0 auto;
+    }
+  }
+}
+
+.sc-gallery-thumbnail {
+
+  .thumbnail-container {
+    cursor: pointer;
+
+    img {
+      height: 8rem;
+
+      @include media-breakpoint-up(md) {
+        height: 11rem;
+      }
+    }
+  }
+
+  .slick-dots {
+    @include media-breakpoint-up(lg) {
+      bottom: -2rem;
+    }
+  }
+}
+
+#lightBoxModal {
+
+  .modal-dialog {
+
+    @include media-breakpoint-up(md) {
+      max-width: calc(100% - 4rem);
+    }
+
+    @include media-breakpoint-up(lg) {
+      max-width: calc(100% - 6rem);
+    }
+  }
+
+  .modal-content {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    position: relative;
+    width: calc(100% - 8rem);
+    margin: 0 auto;
+
+    .modal-header {
+      background: $blue4;
+      border: none;
+      border-radius: 0;
+      height: 3rem;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      z-index: 99;
+
+      @include media-breakpoint-up(md) {
+        height: 6rem;
+      }
+
+      h5 {
+        color: #ffffff;
+        display: block;
+        font-size: 1.2rem;
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+
+        @include media-breakpoint-up(md) {
+          font-size: 2.5rem;
+        }
+      }
+
+      .close {
+        color: #ffffff;
+        font-size: 1.2rem;
+        opacity: 1;
+
+        @include media-breakpoint-up(md) {
+          font-size: 4rem;
+        }
+
+        &:active,
+        &:focus,
+        &:hover {
+          opacity: .8;
+          outline: 0;
+        }
+      }
+    }
+
+    .modal-body {
+      background-color: #ffffff;
+      border: none;
+      border-radius: 0;
+      padding: 0;
+
+      img {
+        margin: 0 auto;
+        display: block;
+      }
+    }
+  }
+}

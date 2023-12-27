@@ -1,0 +1,133 @@
+.sc-card-offer-area {
+  z-index: 0;
+  position: relative;
+  margin-bottom: 4rem;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 3rem;
+  }
+
+  .card-img-overlay {
+    position: relative;
+    height: 19rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include media-breakpoint-up(lg) {
+      height: 25rem;
+    }
+
+    &:after {
+      background: hsla(0,0%,100%,0);
+      background: -webkit-gradient(left top,left bottom,color-stop(2%,hsla(0,0%,100%,0)),color-stop(5%,hsla(0,0%,100%,.01)),color-stop(100%,rgba(0,0,0,.6)));
+      background: -webkit-gradient(linear,left top,left bottom,color-stop(2%,hsla(0,0%,100%,0)),color-stop(5%,hsla(0,0%,100%,.01)),to(rgba(0,0,0,.6)));
+      background: linear-gradient(180deg,hsla(0,0%,100%,0) 2%,hsla(0,0%,100%,.01) 5%,rgba(0,0,0,.6));
+      opacity: .9;
+      display: block;
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &--content--middle {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    bottom: 1.4rem;
+    padding: 0;
+    text-align: center;
+    color: #ffffff;
+
+    @include media-breakpoint-up(lg) {
+      bottom: 2rem;
+    }
+
+    .sc-card-offer-area--destination {
+      margin-bottom: 1rem;
+
+      span {
+        font-size: 1.6rem;
+        display: inline;
+        vertical-align: middle;
+        line-height: normal;
+        letter-spacing: normal;
+        text-transform: uppercase;
+
+        @include media-breakpoint-up(lg) {
+          font-size: 2.5rem;
+        }
+      }
+
+      i {
+        font-size: 2rem;
+        display: inline;
+        padding: 0 .5rem;
+        vertical-align: middle;
+
+        @include media-breakpoint-up(lg) {
+          font-size: 2.5rem;
+          padding: 0 .8rem;
+        }
+      }
+    }
+
+    .sc-card-offer-area--info {
+      font-size: 1.4rem;
+      font-weight: 900;
+      letter-spacing: normal;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  &--content--bottom {
+    bottom: 0;
+    position: static;
+    width: 100%;
+    z-index: 2;
+
+    > div {
+      padding: 1.5rem;
+
+      @include media-breakpoint-up(lg) {
+        padding: 3rem;
+      }
+    }
+
+    p {
+      color: $gray1;
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: normal;
+      margin-bottom: 0 !important;
+
+      @include media-breakpoint-down(lg) {
+        font-weight: 300;
+      }
+    }
+
+    .gnv-btn {
+      width: 100%;
+      display: inline-flex;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 1.7rem;
+        margin: 1.5rem -3rem -1.5rem -3rem;
+        width: auto;
+        padding: 1.25rem 0;
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}

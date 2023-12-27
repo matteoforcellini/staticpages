@@ -1,0 +1,118 @@
+.blue-gradient-bg {
+  background-image: url("../../src/assets/images/section-blue-gradient-bg@2x.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+
+  &--reverse {
+    background-image: url("../../src/assets/images/section-blue-gradient-reverse-bg@2x.jpg");
+    background-position: top center;
+  }
+}
+
+.shape-and-ship-bg {
+  position: relative;
+
+  &--content {
+    overflow: hidden;
+    position: absolute;
+    bottom: -6rem;
+    width: calc(100% - 1.5rem);
+    left: 0;
+
+    @include media-breakpoint-up(md) {
+      bottom: -17.01388888888889VW;
+    }
+
+    @media (min-width: 1440px) {
+      bottom: -23.5rem;
+      width: 80%;
+    }
+
+    img {
+      width: 198%;
+      height: auto;
+      max-width: 100%;
+
+      @include media-breakpoint-up(md) {
+        max-width: 100%;
+        width: auto;
+      }
+
+      &.ship {
+        width: 193%;
+        float: right;
+        margin-top: -8%;
+        max-width: 100%;
+
+        @include media-breakpoint-up(sm) {
+          width: auto;
+          margin-top: -8%;
+          float: none;
+        }
+
+        @include media-breakpoint-up(md) {
+          width: auto;
+          margin-top: -9.6rem;
+          float: none;
+        }
+
+        @include media-breakpoint-up(lg) {
+          margin-top: -8.3%;
+        }
+
+        @media (min-width: 1440px) {
+          margin-top: -10.6rem;
+        }
+      }
+    }
+  }
+
+  > *:not(.shape-and-ship-bg--content) {
+    position: relative;
+    //z-index: 2;
+  }
+
+  &--bottom-spacing {
+    margin-top: -1px;
+
+    > * {
+      position: relative;
+      //z-index: 2;
+    }
+  }
+}
+
+
+div,
+section,
+footer {
+
+  &, &:not(.body) {
+
+    &.shape-and-ship-bg {
+      padding-bottom: 22rem;
+
+      @include media-breakpoint-up(md) {
+        padding-bottom: 20.13888888888889vw;
+      }
+
+      @media (min-width: 1440px) {
+        padding-bottom: 29rem;
+      }
+
+      &--bottom-spacing {
+        padding-top: 6rem;
+
+        @include media-breakpoint-up(md) {
+          padding-top: 10.069444444444445VW;
+        }
+
+        @media (min-width: 1440px) {
+          padding-top: 14.5rem;
+        }
+      }
+    }
+  }
+}
