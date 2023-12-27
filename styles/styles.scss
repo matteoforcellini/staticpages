@@ -1,1 +1,6 @@
-//@import 'colors';
+@import "../node_modules/bootstrap/scss/mixins/_breakpoints.scss";
+body {
+  @include media-breakpoint-up(sm) {
+    color: red;
+  }
+}

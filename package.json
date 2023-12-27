@@ -2,9 +2,10 @@
   "name": "GNV Static Pages",
   "version": "1.0.0",
   "scripts": {
-    "scss": "node-sass -w styles/styles.scss -o styles/",
-    "start": "concurrently \"npm run scss\" \"live-server\""
-  },
+    "scss-main": "node-sass -w styles/styles.scss -o styles/",
+    "scss-app": "node-sass -w styles/app/app.scss -o styles/app/",
+    "start": "concurrently \"npm run scss-main\" \"npm run scss-app\" \"live-server\""
+},
   "devDependencies": {
     "concurrently": "^7.0.0",
     "live-server": "^1.2.1",

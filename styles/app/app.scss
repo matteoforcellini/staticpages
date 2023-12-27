@@ -4,7 +4,7 @@
 // vendors
 @import 'vendors/vendors';
 // abstract
-@import './abstracts/colors';
+//@import './abstracts/colors';
 // font
 @import './gnv-lato';
 @import './gnv-icons';
@@ -14,7 +14,7 @@
 @import './base/layouts';
 @import './base/backgrounds';
 @import './base/typography';
-@import "~slick-carousel/slick/slick.scss";
+@import "../../node_modules/slick-carousel/slick/slick.scss";
 @import "vendors/slick-carousel";
 // Layout
 @import 'layout/header-top';
@@ -413,7 +413,7 @@ main {
     align-items: flex-end;
     justify-content: center;
     height: 200px;
-    background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url("");
+   // background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url("");
     background-size: cover;
     color: $white;
 

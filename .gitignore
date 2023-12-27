@@ -16,3 +16,9 @@
 
 # Node modules
 node_modules/
+
+# IntelliJ IDEA-specific
+.idea/
+*.iml
+*.iws
+*.ipr
