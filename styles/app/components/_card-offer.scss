@@ -1,0 +1,60 @@
+.sc-card-offers {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  max-width: 553px;
+  min-height: 29rem;
+  z-index: 0;
+  position: relative;
+
+  @include media-breakpoint-up(lg) {
+    padding-bottom: 0;
+  }
+
+  &--content {
+    background-color: $white;
+    bottom: 0;
+    padding: 1.5rem;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+
+    .sc-card-offers--title {
+      margin-left: 0;
+      color: $gray1;
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 26px;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 2.2rem;
+        line-height: 30px;
+      }
+    }
+
+    .sc-card-offers--info {
+      color: $orange;
+      font-size: 1.2rem;
+      font-weight: 700;
+      line-height: 26px;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 1.4rem;
+        letter-spacing: 0.3px;
+        line-height: 30px;
+      }
+
+      span {
+        font-size: 2.2rem;
+      }
+    }
+  }
+
+  i {
+    color: $gray1;
+    font-size: 1.5rem;
+    vertical-align: middle;
+  }
+}

@@ -1,0 +1,261 @@
+@mixin user-select($value) {
+  -webkit-user-select: $value;
+  -moz-user-select: $value;
+  -ms-user-select: $value;
+  user-select: $value;
+}
+
+@mixin x-appearance ($value) {
+  -webkit-appearance: $value;
+  -moz-appearance: $value;
+  appearance: $value;
+}
+
+@mixin inputPlaceholder() {
+  $selector: '';
+  $prefixes: (
+    moz: "::-moz",
+    webkit: "::-webkit",
+    ie: ":-ms"
+  );
+  @each $prop, $value in $prefixes {
+    @if $prop != "moz" {
+      $selector: #{$value}-input-placeholder;
+    } @else {
+      $selector: #{$value}-placeholder;
+    }
+    @if & {
+      &#{$selector} {
+        @content;
+      }
+    } @else {
+      #{$selector} {
+        @content;
+      }
+    }
+  }
+  &::placeholder {
+    @content;
+  }
+}
+
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}
+
+
+%custom-checkbox {
+
+  .custom-control-label {
+
+    &::before {
+      background-color: $gnv-white;
+      border-radius: 0;
+    }
+  }
+
+  .custom-control-input {
+
+    &:checked {
+
+      ~ .custom-control-label {
+
+        &::before {
+          background-color: $gnv-white;
+        }
+
+        &::after {
+          font-family: 'gnv-icons';
+          background-image: none;
+          color: #7A7A78;
+          content: '\e956';
+          text-shadow: none;
+          text-align: center;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+//Shadows
+%shadow-light {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .35);
+  -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, .35);
+  -o-box-shadow: 0 2px 6px rgba(0, 0, 0, .35);
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, .35);
+}
+
+%shadow-dark {
+   box-shadow: 0 3px 8px rgba(0, 0, 0, .55);
+   -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, .55);
+   -o-box-shadow: 0 3px 8px rgba(0, 0, 0, .55);
+   -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .55);
+}
+
+%mask-90 {
+  opacity: 0.9;
+  background: rgba(255,255,255,0);/* Old Browsers */
+  background: -moz-linear-gradient(top, rgba(255,255,255,0) 2%, rgba(255,255,255,0.01) 5%, rgba(0,0,0,0.35) 100%); /* FF3.6+ */
+  background: -webkit-gradient(left top, left bottom, color-stop(2%, rgba(255,255,255,0)), color-stop(5%, rgba(255,255,255,0.01)), color-stop(100%, rgba(0,0,0,0.35)));/* Chrome, Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 2%, rgba(255,255,255,0.01) 5%, rgba(0,0,0,0.35) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(255,255,255,0) 2%, rgba(255,255,255,0.01) 5%, rgba(0,0,0,0.35) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(255,255,255,0) 2%, rgba(255,255,255,0.01) 5%, rgba(0,0,0,0.35) 100%); /* IE 10+ */
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 2%, rgba(255,255,255,0.01) 5%, rgba(0,0,0,0.35) 100%);/* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000', GradientType=0 );/* IE6-9 */
+}
+
+$margins: (
+  none: 0,
+  xs: 1.5rem,
+  sm: 2rem,
+  md: 2.5rem,
+  lg: 3rem,
+  xl: 3.5rem
+);
+.m {
+  @each $marginLevel, $marginValue in $margins {
+    &-l--#{$marginLevel} {
+      margin-left: $marginValue;
+    }
+    &-r--#{$marginLevel} {
+      margin-right: $marginValue;
+    }
+    &-t--#{$marginLevel} {
+      margin-top: $marginValue;
+    }
+    &-b--#{$marginLevel} {
+      margin-bottom: $marginValue;
+    }
+  }
+}
+
+$paddings: (
+  none: 0,
+  xs: 1.5rem,
+  sm: 2rem,
+  md: 2.5rem,
+  lg: 3rem,
+  xl: 3.5rem
+);
+.p {
+  @each $paddingLevel, $paddingValue in $paddings {
+    &-l--#{$paddingLevel} {
+      padding-left: $paddingValue;
+    }
+    &-r--#{$paddingLevel} {
+      padding-right: $paddingValue;
+    }
+    &-t--#{$paddingLevel} {
+      padding-top: $paddingValue;
+    }
+    &-b--#{$paddingLevel} {
+      padding-bottom: $paddingValue;
+    }
+  }
+}
+
+$zooms: (
+  xs: 1.5,
+  sm: 2,
+  md: 2.5,
+  lg: 3,
+  xl: 4
+);
+@each $zoomLevel, $zoom in $zooms {
+  .zoom--#{$zoomLevel} {
+    zoom: $zoom;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.relative {
+  position: relative;
+}
+
+.clr-table {
+  &:after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+.display-middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.highlight-orange {
+  background-color: $orange;
+  padding: 0 .5rem;
+}
+
+.gradient-overlay {
+  @extend %mask-90;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.gradient-bottom-to-top {
+  background: hsla(0, 0%, 100%, 0);
+  background: -webkit-gradient(left top, left bottom, color-stop(2%, hsla(0, 0%, 100%, 0)), color-stop(5%, hsla(0, 0%, 100%, .01)), color-stop(100%, rgba(0, 0, 0, .6)));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(2%, hsla(0, 0%, 100%, 0)), color-stop(5%, hsla(0, 0%, 100%, .01)), to(rgba(0, 0, 0, .6)));
+  background: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 2%, hsla(0, 0%, 100%, .01) 5%, rgba(0, 0, 0, .6));
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  opacity: .9;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.dark-shadow {
+  @extend %shadow-dark;
+}
+.light-shadow {
+  @extend %shadow-light;
+}
+
+.hover-link-underlined {
+  &:hover, &:focus, &:active{
+    text-decoration: underline;
+  }
+}

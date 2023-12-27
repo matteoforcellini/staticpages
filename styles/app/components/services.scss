@@ -1,0 +1,15 @@
+.services {
+  position: relative;
+  padding-top:3rem;
+  
+  .row.m-r--none {
+    @include media-breakpoint-down(md) {
+      margin-left: 0 !important;
+    }
+  }
+  .row.m-l--none {
+    @include media-breakpoint-down(md) {
+      margin-right: 0 !important;
+    }
+  }
+}

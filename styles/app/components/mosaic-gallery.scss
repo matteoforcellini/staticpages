@@ -1,0 +1,75 @@
+.sc-mosaic {
+
+  .container {
+
+    @include media-breakpoint-up(md) {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  .row {
+
+    [class^="col-"] {
+      margin-bottom: 30px;
+
+      @include media-breakpoint-down(md) {
+        padding-right: 0;
+        padding-left: 0;
+        margin-bottom: 1px;
+      }
+    }
+  }
+
+  .button-wrapper {
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 41px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .gnv-btn {
+    @include transition(all .3s ease-in-out);
+
+    font-weight: 700;
+    display: block;
+    letter-spacing: .7px;
+    padding: 1.5rem 2.7rem;
+    margin: 1.4rem 2rem 0 2rem;
+    width: auto;
+
+    @include media-breakpoint-up(lg) {
+      display: inline-block;
+      margin: 2.5rem 0 0 0;
+    }
+  }
+
+  &--mobile-carousel {
+    &.mobile {
+      [class^=col-] {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    &.slick-initialized.slick-slider {
+      &, &.slick-dotted {
+        margin-bottom: 0;
+        padding-bottom: 4rem;
+      }
+
+      .slick-dots {
+        padding: 0;
+      }
+
+      .slick-list {
+        margin: 0 1.5rem;
+      }
+    }
+  }
+}

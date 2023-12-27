@@ -1,0 +1,15 @@
+.table-layout {
+  display: table;
+
+  .table-cell {
+    display: table-cell;
+
+    &--inline {
+      width: 1%;
+    }
+
+    &--vertically-centered {
+      vertical-align: middle;
+    }
+  }
+}

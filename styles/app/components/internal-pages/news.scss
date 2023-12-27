@@ -1,0 +1,164 @@
+.sc-news-list {
+  padding: 0;
+
+  &-card {
+    border: 0;
+    padding: 1.5rem 0;
+
+    @include media-breakpoint-up(lg) {
+      padding: 2rem 1rem;
+    }
+
+    figure {
+      position: relative;
+      overflow: hidden;
+
+      @include media-breakpoint-up(md) {
+        height: 20rem;
+      }
+
+      @include media-breakpoint-up(xl) {
+        height: 32rem;
+      }
+
+      i {
+        display: none;
+        color: #ffffff;
+        font-size: 8rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 99;
+      }
+    }
+
+    &.idle-img {
+
+      figure {
+        background-color: $blue4;
+
+        @include media-breakpoint-down(sm) {
+          height: 30rem;
+        }
+
+        i {
+          display: block
+        }
+      }
+    }
+
+    .card-body {
+      padding: 1rem 0;
+    }
+
+    time {
+      color: $blue4;
+      display: block;
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+    }
+
+    .sc-news-list-card--title {
+      margin-bottom: 0;
+
+      a {
+        color: $gray1;
+        display: inline-block;
+        font-size: 1.6rem;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        margin-bottom: 1rem;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .sc-news-list-card--descr {
+
+      font-size: 1.4rem;
+      font-weight: 300;
+      line-height: 2.2rem;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.sc-news-article {
+  padding: 0;
+
+  article {
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: $gray1;
+      letter-spacing: .5px;
+      margin-bottom: 2rem;
+      text-align: left;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 3.2rem;
+      }
+    }
+
+    time {
+      color: $blue4;
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      margin-bottom: 1.5rem;
+      margin-top: 3rem;
+      text-transform: uppercase;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 1.2rem;
+      }
+
+      @include media-breakpoint-up(xl) {
+        margin-top: 0;
+      }
+    }
+
+    h2 {
+      color: $gray1;
+      font-size: 1.6rem;
+      font-weight: 700;
+      line-height: 24px;
+      margin: 1.5rem 0;
+      opacity: .5;
+      text-align: left;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 1.8rem;
+        line-height: 30px;
+      }
+    }
+
+    figure {
+      background-color: $blue4;
+      min-height: 30rem;
+      position: relative;
+      z-index: 1;
+
+      @include media-breakpoint-up(md) {
+        min-height: 50rem;
+      }
+      i {
+        color: #ffffff;
+        font-size: 8rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 99;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "GNV Static Pages",
+  "version": "1.0.0",
+  "scripts": {
+    "scss": "node-sass -w styles/styles.scss -o styles/",
+    "start": "concurrently \"npm run scss\" \"live-server\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "live-server": "^1.2.1",
+    "node-sass": "^7.0.1",
+    "bootstrap": "^4.4.1",
+    "slick-carousel": "^1.8.1",
+    "bootstrap-block-grid": "^1.1.7"
+  }
+}

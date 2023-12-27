@@ -1,0 +1,73 @@
+.sc-faq-accordion {
+
+  .card {
+    border: 0;
+    border-radius: 0;
+    padding-bottom: .2rem;
+
+    .card-header {
+      background-color: $blue4;
+      border-color: $blue4;
+      border-radius: 0;
+      padding: 1.5rem;
+
+      @include media-breakpoint-up(lg) {
+        padding: 1.5rem 1.5rem 1.5rem 3rem;
+      }
+
+      h5 {
+        color: #ffffff;
+        font-size: 1.4rem;
+        line-height: normal;
+        letter-spacing: normal;
+        margin-bottom: 0;
+        position: relative;
+        text-transform: uppercase;
+
+        span {
+          display: inline-block;
+          font-weight: 400;
+
+          @include media-breakpoint-up(lg) {
+            float: right;
+            font-weight: bold;
+          }
+
+          i {
+            margin-left: 1rem;
+
+            @include media-breakpoint-down(md) {
+              position: absolute;
+              right: 0;
+              top: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .card-body {
+      border-left: 2px solid $gray8;
+      border-right: 2px solid $gray8;
+      border-bottom: 2px solid $gray8;
+
+      padding: 1.5rem;
+
+      @include media-breakpoint-up(lg) {
+        padding: 1.5rem 3rem;
+      }
+
+      p {
+        color: $gray1;
+        font-size: 1.4rem;
+        font-weight: 300;
+        margin-bottom: 0 !important;
+
+        @include media-breakpoint-up(lg) {
+          font-size: 1.8rem;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+}

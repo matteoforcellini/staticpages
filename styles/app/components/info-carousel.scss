@@ -1,0 +1,24 @@
+.info-carousel {
+  width: 100%;
+
+  &.slick-dotted.slick-slider {
+    padding-bottom: 35px;
+
+    @include media-breakpoint-up(lg) {
+      padding-bottom: 20px;
+    }
+  }
+
+  .slick-slide {
+    padding: 0;
+  }
+
+  .slick-dots {
+    bottom: 10px;
+    padding: 0;
+  }
+
+  .slick-active button:before {
+    background-color: $white;
+  }
+}

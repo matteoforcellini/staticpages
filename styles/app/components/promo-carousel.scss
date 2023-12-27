@@ -1,0 +1,27 @@
+.promo-section {
+  .promo-carousel {
+    display: block;
+    margin: 3rem auto;
+    width: 100%;
+
+    @include media-breakpoint-up(lg) {
+      margin: 4rem auto;
+    }
+  }
+
+  .slick-list {
+    @include media-breakpoint-up(sm) {
+      margin: 0 -1.5rem;
+    }
+
+    .slick-slide {
+      @include media-breakpoint-down(sm) {
+        padding: 0 1.5rem;
+      }
+    }
+  }
+
+  .slick-dots {
+    bottom: -3rem;
+  }
+}

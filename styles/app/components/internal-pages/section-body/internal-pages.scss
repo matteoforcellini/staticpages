@@ -1,0 +1,117 @@
+section.internal-pages {
+  background-color: $gray8;
+  padding: 3rem 1.5rem;
+
+  @include media-breakpoint-up(md) {
+    padding-top: 4rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .internal-pages-content {
+    padding: 1.5rem;
+    background-color: white;
+
+    @include media-breakpoint-up(lg) {
+      padding: 3rem;
+    }
+
+    section {
+      padding: 2rem 0;
+    }
+
+    &--head {
+      margin-bottom: 1rem;
+
+      img {
+        margin-bottom: 1.5rem;
+
+        @include media-breakpoint-up(lg) {
+          margin-bottom: 0;
+        }
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+
+      h1, h2, h3 {
+        text-align: center;
+
+        @include media-breakpoint-up(lg) {
+          text-align: left;
+        }
+      }
+
+      h2, h3 {
+        font-weight: 300;
+      }
+
+      .sc-map {
+        margin-bottom: 0;
+      }
+    }
+
+    .table {
+
+      thead,
+      tbody tr {
+        font-size: 1.4rem;
+      }
+
+      tbody tr {
+        font-weight: 300;
+      }
+
+      thead th,
+      td,
+      th {
+        border-color: $orange;
+      }
+
+      th {
+        border-top: 0;
+      }
+    }
+
+    ul, ol {
+
+      li {
+        font-size: 1.4rem;
+        font-weight: 300;
+        line-height: 24px;
+        margin-bottom: 1rem;
+
+        @include media-breakpoint-up(lg) {
+          font-size: 1.8rem;
+          line-height: 24px;
+        }
+      }
+    }
+
+    .sc-offer-card-list {
+
+      .sc-card-promo {
+        @include media-breakpoint-down(lg) {
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+
+    .sc-map {
+      height: 500px;
+      width: 100%;
+      display: inline-block;
+      overflow: hidden;
+      margin-bottom: 2rem;
+
+      iframe {
+        position:relative;
+        top:-66px;
+        border:none;
+        width:100%;
+        height: 546px;
+      }
+    }
+  }
+}

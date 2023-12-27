@@ -1,0 +1,42 @@
+.sc-page-teaser-item {
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 2rem;
+  position: relative;
+  height: 32rem;
+
+  &.has-border {
+    border: 2px solid $blue4;
+  }
+
+  .card-bkg {
+    height: 24rem;
+    margin-bottom: 8rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .card-body {
+    position: absolute;
+    width: 100%;
+    height: 8rem;
+    bottom: 0;
+  }
+
+  &--title {
+    color: $blue4;
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $blue4;
+      text-decoration: underline;
+    }
+  }
+}

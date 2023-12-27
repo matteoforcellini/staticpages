@@ -1,0 +1,878 @@
+@import 'variables';
+@import '../../abstracts/variables';
+
+@font-face {
+  font-family: 'gnv-icons';
+  src:
+  url('#{$font-path}gnv-icons/fonts/gnv-icons.ttf') format('truetype'),
+  url('#{$font-path}gnv-icons/fonts/gnv-icons.woff') format('woff'),
+  url('#{$font-path}gnv-icons/fonts/gnv-icons.svg#gnv-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+i,
+[class^="gnv-icon-"]:before,
+[class*=" gnv-icon-"]:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'gnv-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@function unicode($str) {
+  @return unquote("\"") + $str + unquote("\"");
+}
+
+.gnv-icon-alert {
+  &:before {
+    content: $gnv-icon-alert;
+  }
+}
+.gnv-icon-search {
+  &:before {
+    content: $gnv-icon-search;
+  }
+}
+.gnv-icon-ticket {
+  &:before {
+    content: $gnv-icon-ticket;
+  }
+}
+.gnv-icon-instagram {
+  &:before {
+    content: $gnv-icon-instagram;
+  }
+}
+.gnv-icon-library-circled {
+  &:before {
+    content: $gnv-icon-library-circled;
+  }
+}
+.gnv-icon-mail-3 {
+  &:before {
+    content: $gnv-icon-mail-3;
+  }
+}
+.gnv-icon-caret-down {
+  &:before {
+    content: $gnv-icon-caret-down;
+  }
+}
+.gnv-icon-logo-light {
+  &:before {
+    content: $gnv-icon-logo-light;
+  }
+}
+.gnv-icon-arrow-light-left {
+  &:before {
+    content: $gnv-icon-arrow-light-left;
+  }
+}
+.gnv-icon-arrow-light-right {
+  &:before {
+    content: $gnv-icon-arrow-light-right;
+  }
+}
+.gnv-icon-dinner {
+  &:before {
+    content: $gnv-icon-dinner;
+  }
+}
+.gnv-icon-snack-bar {
+  &:before {
+    content: $gnv-icon-snack-bar;
+  }
+}
+.gnv-icon-ice-cream {
+  &:before {
+    content: $gnv-icon-ice-cream;
+  }
+}
+.gnv-icon-shopping-center {
+  &:before {
+    content: $gnv-icon-shopping-center;
+  }
+}
+.gnv-icon-games {
+  &:before {
+    content: $gnv-icon-games;
+  }
+}
+.gnv-icon-convention {
+  &:before {
+    content: $gnv-icon-convention;
+  }
+}
+.gnv-icon-meeting {
+  &:before {
+    content: $gnv-icon-meeting;
+  }
+}
+.gnv-icon-swimming-pool {
+  &:before {
+    content: $gnv-icon-swimming-pool;
+  }
+}
+.gnv-icon-library {
+  &:before {
+    content: $gnv-icon-library;
+  }
+}
+.gnv-icon-video-on-demand {
+  &:before {
+    content: $gnv-icon-video-on-demand;
+  }
+}
+.gnv-icon-bathroom {
+  &:before {
+    content: $gnv-icon-bathroom;
+  }
+}
+.gnv-icon-sink {
+  &:before {
+    content: $gnv-icon-sink;
+  }
+}
+.gnv-icon-wifi-free {
+  &:before {
+    content: $gnv-icon-wifi-free;
+  }
+}
+.gnv-icon-tv {
+  &:before {
+    content: $gnv-icon-tv;
+  }
+}
+.gnv-icon-phone-3 {
+  &:before {
+    content: $gnv-icon-phone-3;
+  }
+}
+.gnv-icon-radio {
+  &:before {
+    content: $gnv-icon-radio;
+  }
+}
+.gnv-icon-heat {
+  &:before {
+    content: $gnv-icon-heat;
+  }
+}
+.gnv-icon-air-conditioner {
+  &:before {
+    content: $gnv-icon-air-conditioner;
+  }
+}
+.gnv-icon-safe {
+  &:before {
+    content: $gnv-icon-safe;
+  }
+}
+.gnv-icon-shower {
+  &:before {
+    content: $gnv-icon-shower;
+  }
+}
+.gnv-icon-hydro-massage {
+  &:before {
+    content: $gnv-icon-hydro-massage;
+  }
+}
+.gnv-icon-phon {
+  &:before {
+    content: $gnv-icon-phon;
+  }
+}
+.gnv-icon-wc {
+  &:before {
+    content: $gnv-icon-wc;
+  }
+}
+.gnv-icon-minibar {
+  &:before {
+    content: $gnv-icon-minibar;
+  }
+}
+.gnv-icon-late-checkout {
+  &:before {
+    content: $gnv-icon-late-checkout;
+  }
+}
+.gnv-icon-sea-view {
+  &:before {
+    content: $gnv-icon-sea-view;
+  }
+}
+.gnv-icon-reclinable {
+  &:before {
+    content: $gnv-icon-reclinable;
+  }
+}
+.gnv-icon-sofa-bed {
+  &:before {
+    content: $gnv-icon-sofa-bed;
+  }
+}
+.gnv-icon-balcony {
+  &:before {
+    content: $gnv-icon-balcony;
+  }
+}
+.gnv-icon-beach-chair {
+  &:before {
+    content: $gnv-icon-beach-chair;
+  }
+}
+.gnv-icon-sad-tear {
+  &:before {
+    content: $gnv-icon-sad-tear;
+  }
+}
+.gnv-icon-barchetta {
+  &:before {
+    content: $gnv-icon-barchetta;
+  }
+}
+.gnv-icon-alert1 {
+  &:before {
+    content: $gnv-icon-alert1;
+  }
+}
+.gnv-icon-other-services {
+  &:before {
+    content: $gnv-icon-other-services;
+  }
+}
+.gnv-icon-route {
+  &:before {
+    content: $gnv-icon-route;
+  }
+}
+.gnv-icon-share {
+  &:before {
+    content: $gnv-icon-share;
+  }
+}
+.gnv-icon-adult-male-plus-infant-circle {
+  &:before {
+    content: $gnv-icon-adult-male-plus-infant-circle;
+  }
+}
+.gnv-icon-kid-female-plus-infant-circle {
+  &:before {
+    content: $gnv-icon-kid-female-plus-infant-circle;
+  }
+}
+.gnv-icon-adult-plus-infant-circle {
+  &:before {
+    content: $gnv-icon-adult-plus-infant-circle;
+  }
+}
+.gnv-icon-adult-male-plus-infant {
+  &:before {
+    content: $gnv-icon-adult-male-plus-infant;
+  }
+}
+.gnv-icon-adult-plus-infant {
+  &:before {
+    content: $gnv-icon-adult-plus-infant;
+  }
+}
+.gnv-icon-kid-female-plus-infant {
+  &:before {
+    content: $gnv-icon-kid-female-plus-infant;
+  }
+}
+.gnv-icon-adult-male-circle {
+  &:before {
+    content: $gnv-icon-adult-male-circle;
+  }
+}
+.gnv-icon-adult-female-circle {
+  &:before {
+    content: $gnv-icon-adult-female-circle;
+  }
+}
+.gnv-icon-kid-male-circle {
+  &:before {
+    content: $gnv-icon-kid-male-circle;
+  }
+}
+.gnv-icon-kid-female-circle {
+  &:before {
+    content: $gnv-icon-kid-female-circle;
+  }
+}
+.gnv-icon-adult-male {
+  &:before {
+    content: $gnv-icon-adult-male;
+  }
+}
+.gnv-icon-adult-female {
+  &:before {
+    content: $gnv-icon-adult-female;
+  }
+}
+.gnv-icon-kid-female {
+  &:before {
+    content: $gnv-icon-kid-female;
+  }
+}
+.gnv-icon-kid-female-2 {
+  &:before {
+    content: $gnv-icon-kid-female-2;
+  }
+}
+.gnv-icon-kid-female-3 {
+  &:before {
+    content: $gnv-icon-kid-female-3;
+  }
+}
+.gnv-icon-kid-male {
+  &:before {
+    content: $gnv-icon-kid-male;
+  }
+}
+.gnv-icon-infant {
+  &:before {
+    content: $gnv-icon-infant;
+  }
+}
+.gnv-icon-infant-2 {
+  &:before {
+    content: $gnv-icon-infant-2;
+  }
+}
+.gnv-icon-cat {
+  &:before {
+    content: $gnv-icon-cat;
+  }
+}
+.gnv-icon-dog {
+  &:before {
+    content: $gnv-icon-dog;
+  }
+}
+.gnv-icon-animal {
+  &:before {
+    content: $gnv-icon-animal;
+  }
+}
+.gnv-icon-paw-si {
+  &:before {
+    content: $gnv-icon-paw-si;
+  }
+}
+.gnv-icon-paw-no {
+  &:before {
+    content: $gnv-icon-paw-no;
+  }
+}
+.gnv-icon-close-circle {
+  &:before {
+    content: $gnv-icon-close-circle;
+  }
+}
+.gnv-icon-plus-circle {
+  &:before {
+    content: $gnv-icon-plus-circle;
+  }
+}
+.gnv-icon-close {
+  &:before {
+    content: $gnv-icon-close;
+  }
+}
+.gnv-icon-plus {
+  &:before {
+    content: $gnv-icon-plus;
+  }
+}
+.gnv-icon-minus {
+  &:before {
+    content: $gnv-icon-minus;
+  }
+}
+.gnv-icon-euro-4 {
+  &:before {
+    content: $gnv-icon-euro-4;
+  }
+}
+.gnv-icon-euro-3 {
+  &:before {
+    content: $gnv-icon-euro-3;
+  }
+}
+.gnv-icon-euro-2 {
+  &:before {
+    content: $gnv-icon-euro-2;
+  }
+}
+.gnv-icon-euro-1 {
+  &:before {
+    content: $gnv-icon-euro-1;
+  }
+}
+.gnv-icon-check-rounded {
+  &:before {
+    content: $gnv-icon-check-rounded;
+  }
+}
+.gnv-icon-upgrade {
+  &:before {
+    content: $gnv-icon-upgrade;
+  }
+}
+.gnv-icon-insurance {
+  &:before {
+    content: $gnv-icon-insurance;
+  }
+}
+.gnv-icon-time {
+  &:before {
+    content: $gnv-icon-time;
+  }
+}
+.gnv-icon-priority-landing {
+  &:before {
+    content: $gnv-icon-priority-landing;
+  }
+}
+.gnv-icon-gym {
+  &:before {
+    content: $gnv-icon-gym;
+  }
+}
+.gnv-icon-child-kit {
+  &:before {
+    content: $gnv-icon-child-kit;
+  }
+}
+.gnv-icon-catering {
+  &:before {
+    content: $gnv-icon-catering;
+  }
+}
+.gnv-icon-check-dialogic {
+  &:before {
+    content: $gnv-icon-check-dialogic;
+  }
+}
+.gnv-icon-delete {
+  &:before {
+    content: $gnv-icon-delete;
+  }
+}
+.gnv-icon-arrow-circle-right {
+  &:before {
+    content: $gnv-icon-arrow-circle-right;
+  }
+}
+.gnv-icon-arrow-circle-left {
+  &:before {
+    content: $gnv-icon-arrow-circle-left;
+  }
+}
+.gnv-icon-pencil {
+  &:before {
+    content: $gnv-icon-pencil;
+  }
+}
+.gnv-icon-down-caret {
+  &:before {
+    content: $gnv-icon-down-caret;
+  }
+}
+.gnv-icon-left-caret {
+  &:before {
+    content: $gnv-icon-left-caret;
+  }
+}
+.gnv-icon-right-caret {
+  &:before {
+    content: $gnv-icon-right-caret;
+  }
+}
+.gnv-icon-up-caret {
+  &:before {
+    content: $gnv-icon-up-caret;
+  }
+}
+.gnv-icon-boat {
+  &:before {
+    content: $gnv-icon-boat;
+  }
+}
+.gnv-icon-bridge-place {
+  &:before {
+    content: $gnv-icon-bridge-place;
+  }
+}
+.gnv-icon-cabin-shared {
+  &:before {
+    content: $gnv-icon-cabin-shared;
+  }
+}
+.gnv-icon-suite {
+  &:before {
+    content: $gnv-icon-suite;
+  }
+}
+.gnv-icon-cabin-private {
+  &:before {
+    content: $gnv-icon-cabin-private;
+  }
+}
+.gnv-icon-chair {
+  &:before {
+    content: $gnv-icon-chair;
+  }
+}
+.gnv-icon-pin-date-light {
+  &:before {
+    content: $gnv-icon-pin-date-light;
+  }
+}
+.gnv-icon-pin-date {
+  &:before {
+    content: $gnv-icon-pin-date;
+  }
+}
+.gnv-icon-pin {
+  &:before {
+    content: $gnv-icon-pin;
+  }
+}
+.gnv-icon-check-regular {
+  &:before {
+    content: $gnv-icon-check-regular;
+  }
+}
+.gnv-icon-restaurant {
+  &:before {
+    content: $gnv-icon-restaurant;
+  }
+}
+.gnv-icon-communication {
+  &:before {
+    content: $gnv-icon-communication;
+  }
+}
+.gnv-icon-lock {
+  &:before {
+    content: $gnv-icon-lock;
+  }
+}
+.gnv-icon-promo {
+  &:before {
+    content: $gnv-icon-promo;
+  }
+}
+.gnv-icon-people-circle {
+  &:before {
+    content: $gnv-icon-people-circle;
+  }
+}
+.gnv-icon-resident-circle {
+  &:before {
+    content: $gnv-icon-resident-circle;
+  }
+}
+.gnv-icon-info {
+  &:before {
+    content: $gnv-icon-info;
+  }
+}
+.gnv-icon-logo {
+  &:before {
+    content: $gnv-icon-logo;
+  }
+}
+.gnv-icon-def-passenger {
+  &:before {
+    content: $gnv-icon-def-passenger;
+  }
+}
+.gnv-icon-wifi {
+  &:before {
+    content: $gnv-icon-wifi;
+  }
+}
+.gnv-icon-deposito-bagagli {
+  &:before {
+    content: $gnv-icon-deposito-bagagli;
+  }
+}
+.gnv-icon-halal-food {
+  &:before {
+    content: $gnv-icon-halal-food;
+  }
+}
+.gnv-icon-entertainment {
+  &:before {
+    content: $gnv-icon-entertainment;
+  }
+}
+.gnv-icon-lounge-bar {
+  &:before {
+    content: $gnv-icon-lounge-bar;
+  }
+}
+.gnv-icon-self-service-restaurant {
+  &:before {
+    content: $gnv-icon-self-service-restaurant;
+  }
+}
+.gnv-icon-kids-room {
+  &:before {
+    content: $gnv-icon-kids-room;
+  }
+}
+.gnv-icon-prayer-room {
+  &:before {
+    content: $gnv-icon-prayer-room;
+  }
+}
+.gnv-icon-shop {
+  &:before {
+    content: $gnv-icon-shop;
+  }
+}
+.gnv-icon-pets {
+  &:before {
+    content: $gnv-icon-pets;
+  }
+}
+.gnv-icon-groups {
+  &:before {
+    content: $gnv-icon-groups;
+  }
+}
+.gnv-icon-movies {
+  &:before {
+    content: $gnv-icon-movies;
+  }
+}
+.gnv-icon-slot-room {
+  &:before {
+    content: $gnv-icon-slot-room;
+  }
+}
+.gnv-icon-pizza {
+  &:before {
+    content: $gnv-icon-pizza;
+  }
+}
+.gnv-icon-kids-entertainment {
+  &:before {
+    content: $gnv-icon-kids-entertainment;
+  }
+}
+.gnv-icon-church {
+  &:before {
+    content: $gnv-icon-church;
+  }
+}
+.gnv-icon-resident-rate-circle {
+  &:before {
+    content: $gnv-icon-resident-rate-circle;
+  }
+}
+.gnv-icon-holidays {
+  &:before {
+    content: $gnv-icon-holidays;
+  }
+}
+.gnv-icon-work {
+  &:before {
+    content: $gnv-icon-work;
+  }
+}
+.gnv-icon-family {
+  &:before {
+    content: $gnv-icon-family;
+  }
+}
+.gnv-icon-pinterest {
+  &:before {
+    content: $gnv-icon-pinterest;
+  }
+}
+.gnv-icon-youtube {
+  &:before {
+    content: $gnv-icon-youtube;
+  }
+}
+.gnv-icon-twitter {
+  &:before {
+    content: $gnv-icon-twitter;
+  }
+}
+.gnv-icon-facebook {
+  &:before {
+    content: $gnv-icon-facebook;
+  }
+}
+.gnv-icon-credit-card {
+  &:before {
+    content: $gnv-icon-credit-card;
+  }
+}
+.gnv-icon-hourglass {
+  &:before {
+    content: $gnv-icon-hourglass;
+  }
+}
+.gnv-icon-calendar {
+  &:before {
+    content: $gnv-icon-calendar;
+  }
+}
+.gnv-icon-car {
+  &:before {
+    content: $gnv-icon-car;
+  }
+}
+.gnv-icon-big-vehicle {
+  &:before {
+    content: $gnv-icon-big-vehicle;
+  }
+}
+.gnv-icon-camper {
+  &:before {
+    content: $gnv-icon-camper;
+  }
+}
+.gnv-icon-trainer {
+  &:before {
+    content: $gnv-icon-trainer;
+  }
+}
+.gnv-icon-motorbike {
+  &:before {
+    content: $gnv-icon-motorbike;
+  }
+}
+.gnv-icon-my-gnv {
+  &:before {
+    content: $gnv-icon-my-gnv;
+  }
+}
+.gnv-icon-group-circle {
+  &:before {
+    content: $gnv-icon-group-circle;
+  }
+}
+.gnv-icon-paw-circle {
+  &:before {
+    content: $gnv-icon-paw-circle;
+  }
+}
+.gnv-icon-resident-rate-circle2 {
+  &:before {
+    content: $gnv-icon-resident-rate-circle2;
+  }
+}
+.gnv-icon-arrow-right {
+  &:before {
+    content: $gnv-icon-arrow-right;
+  }
+}
+.gnv-icon-arrow-left {
+  &:before {
+    content: $gnv-icon-arrow-left;
+  }
+}
+.gnv-icon-arrow-down {
+  &:before {
+    content: $gnv-icon-arrow-down;
+  }
+}
+.gnv-icon-arrow-up {
+  &:before {
+    content: $gnv-icon-arrow-up;
+  }
+}
+.gnv-icon-download {
+  &:before {
+    content: $gnv-icon-download;
+  }
+}
+.gnv-icon-to {
+  &:before {
+    content: $gnv-icon-to;
+  }
+}
+.gnv-icon-pointer-left {
+  &:before {
+    content: $gnv-icon-pointer-left;
+  }
+}
+.gnv-icon-from-to-separate {
+  &:before {
+    content: $gnv-icon-from-to-separate;
+  }
+}
+.gnv-icon-from-to {
+  &:before {
+    content: $gnv-icon-from-to;
+  }
+}
+.gnv-icon-services {
+  &:before {
+    content: $gnv-icon-services;
+  }
+}
+.gnv-icon-user {
+  &:before {
+    content: $gnv-icon-user;
+  }
+}
+.gnv-icon-phone {
+  &:before {
+    content: $gnv-icon-phone;
+  }
+}
+.gnv-icon-phone-2 {
+  &:before {
+    content: $gnv-icon-phone-2;
+  }
+}
+.gnv-icon-mail {
+  &:before {
+    content: $gnv-icon-mail;
+  }
+}
+.gnv-icon-mail-2 {
+  &:before {
+    content: $gnv-icon-mail-2;
+  }
+}
+
+.gnv-icon-check:before {
+  content: $gnv-icon-check;
+  /*color: #000;*/
+}
+
+.gnv-icon-tickets:before {
+  content: $gnv-icon-tickets;
+}
+
+.gnv-icon-check-inverted:before {
+  content: $gnv-icon-check-inverted;
+  /*color: #000;*/
+}
+
+.gnv-icon-phone-4:before {
+  content: $gnv-icon-phone-4;
+  /*color: #000;*/
+}

@@ -1,0 +1,87 @@
+/* GNV color palette */
+$gnv-white: #ffffff;
+$gray1: #4D4D4D;
+$gray2: #777777;
+$gray3: #7A7A78;
+$gray4: #7D7D7D;
+$gray5: #C6C7C8;
+$gray6: #D8D8D8;
+$gray7: #EBEBEB;
+$gray8: #F2F2F2;
+$gray9: #F4F7FB;
+$gray10: #F4F7FB;
+$gray11: #435a80;
+$black: #222222;
+$orange: #F27D00;
+$orange1: #E35D02;
+$orange2: #E57936;
+$blue1: #0B244D;
+$blue2: #0D254C;
+$blue3: #005092;
+$blue4: #0047BA;
+
+
+$orange3: #FD7E14;
+$light-gray: #66686B;
+$light-gray2: #DDE5EC;
+$gray-blue: #D9E4F4;
+$dark-medium: #5F6163;
+
+$facebook-blue: #3b5998;
+$gray-user: #efefef;
+$has-error: #ff0000;
+
+$alert-error-dark: #ff5251;
+$alert-error-light: #f8d7da;
+
+$stepper-incomplete: $gray4;
+$stepper-complete: $gnv-white;
+$carousel-dot-border-color: $gray4;
+
+/* Bkg color */
+.gnv-bkg {
+
+  &--blue {
+    background-color: $blue4 !important;
+  }
+  &--dark-blue {
+    background-color: $blue1 !important;
+  }
+  &--gray {
+    background-color: $gray1 !important;
+  }
+  &--light-gray {
+    background-color: $gray8 !important;
+  }
+  &--orange {
+    background-color: $orange !important;
+  }
+  &--white {
+    background-color: $gnv-white !important;
+  }
+}
+
+.bg-orange {
+  background-color: $orange;
+}
+
+.bg-white {
+  background-color: $gnv-white;
+}
+
+/* Txt color */
+.gnv-txt {
+
+  &--blue {
+    color: $blue4 !important;
+  }
+  &--gray {
+    color: $gray1 !important;
+  }
+  &--orange {
+    color: $orange !important;
+  }
+  &--white {
+    color: $gnv-white !important;
+  }
+}

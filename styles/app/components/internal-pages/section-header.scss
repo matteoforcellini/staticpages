@@ -1,0 +1,137 @@
+.internal-pages-header {
+  background-color: $blue1;
+  color: $white;
+  padding: 3rem 0;
+  text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    min-height: 28rem;
+  }
+
+  &.min-height-xs{
+    @include media-breakpoint-up(lg) {
+      min-height: 10rem;
+    }
+  }
+
+  .internal-pages-header--title {
+    display: block;
+    font-size: 1.9rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 1.8rem;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 1.7rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+      display: inline-block;
+      font-size: 2rem;
+      margin-bottom: 0;
+    }
+  }
+
+  p {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 2.29;
+    margin-bottom: 0;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 1.7rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 2rem;
+      line-height: 1.6;
+    }
+
+    &.find-offers {
+      font-weight: 700;
+      text-decoration: underline;
+
+      @include media-breakpoint-up(md) {
+        margin-left: 1.5rem;
+      }
+
+      @include media-breakpoint-up(lg) {
+        margin: 0 2.5rem 0 1.5rem;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .header-btn {
+    background: $blue1;
+    color: $gnv-white;
+    display: block;
+    text-align: center;
+
+    @include media-breakpoint-up(sm) {
+      margin-left: 4rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      border: 2px solid white;
+      border-radius: 2px;
+      display: inline-block;
+      margin-left: 2rem;
+      margin-bottom: 0;
+      padding: .75rem;
+      text-align: center;
+    }
+
+    &:first-of-type,
+    &:first-child {
+
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 3rem;
+      }
+    }
+
+    &:not(.btn-rounded) {
+      font-size: 2rem;
+      margin-right: 1.5rem;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 2.7rem;
+        min-width: 25rem;
+      }
+
+      i {
+        font-size: 3.3rem;
+        margin-right: 1.5rem;
+        display: inline;
+        vertical-align: middle;
+
+        @include media-breakpoint-up(lg) {
+          font-size: 2.7rem;
+          margin-right: .5rem;
+        }
+      }
+    }
+
+    &.btn-rounded {
+      display: none;
+
+      @include media-breakpoint-up(lg) {
+        display: inline-block;
+        border-radius: 50%;
+        line-height: normal;
+        padding: .7rem;
+        width: 4rem;
+        height: 4rem;
+        margin: 0;
+      }
+
+      i {
+        font-size: 2rem;
+      }
+    }
+
+    &:hover {
+      text-decoration: unset;
+    }
+  }
+}
