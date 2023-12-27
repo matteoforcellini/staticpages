@@ -1,0 +1,64 @@
+.sc-hero-links {
+
+  @include media-breakpoint-down(md) {
+    margin-top: 3.5rem;
+  }
+
+  &.table-light {
+    background-color: transparent;
+    border-color: $orange;
+    color: $gnv-white;
+    text-align: left;
+  }
+
+  thead {
+    tr {
+      th {
+        border-color: $orange;
+        border-top: 0;
+        font-size: 1.6rem;
+        font-weight: 300;
+        letter-spacing: 2px;
+        padding: 1rem;
+        text-transform: uppercase;
+
+        @include media-breakpoint-up(lg) {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  tbody {
+
+    tr {
+
+      &:first-child {
+        td {
+          padding-top: 2rem;
+        }
+      }
+
+      td {
+        border: none;
+        padding: 1rem;
+
+        a {
+          color: $gnv-white;
+          font-size: 1.6rem;
+          font-weight: 300;
+          line-height: normal;
+          letter-spacing: 0.5px;
+
+          @include media-breakpoint-up(lg) {
+            font-size: 1.8rem;
+          }
+
+          &:hover {
+            opacity: .7;
+          }
+        }
+      }
+    }
+  }
+}

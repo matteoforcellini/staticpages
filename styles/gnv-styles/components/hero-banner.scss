@@ -1,0 +1,380 @@
+.sc-hero {
+
+  &--slider {
+    @media (min-width: 1440px) {
+      height: 65rem;
+      overflow: hidden;
+    }
+
+    &:not(.slick-initialized) {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    .container {
+      min-height: 42rem;
+      position: relative;
+
+      @media (min-width: 1440px) {
+        min-height: 65rem;
+      }
+
+      @media (min-width: 767px) and (max-width: 1024px) {
+        max-width: 100%;
+      }
+    }
+    /******* IFRAME VIDEO ********/
+    //Slider full width
+    &.slick-slider {
+
+      .sc-hero--slide {
+        overflow: hidden;
+        position: relative;
+
+        @include media-breakpoint-up(lg) {
+          height: 65rem;
+        }
+      }
+
+      .slick-slide {
+        padding: 0;
+      }
+
+      .slick-dots {
+        bottom: 5rem;
+      }
+
+      .embed-video-item {
+        display: none;
+        height: 0;
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        padding-top: 30px;
+        position: absolute;
+        width: 100%;
+        bottom: 50%;
+        transform: translateY(50%);
+
+        @include media-breakpoint-up(lg) {
+          display: block;
+        }
+
+        video {
+          width: 100%;
+        }
+
+        .embed-responsive-item {
+          height: 100%;
+          width: 100%;
+          left: 0;
+          position: absolute;
+          top: 0;
+        }
+      }
+
+      iframe {
+        pointer-events: none;
+      }
+    }
+    //Slider respect ratio - no full width
+    //&.slick-slider {
+    //
+    //  .slick-list,
+    //  .slick-track,
+    //  .slick-slide {
+    //    height: 100%;
+    //  }
+    //.slick-slide {
+    //  padding: 0;
+    //}
+    //
+    //  .embed-video-item,
+    //  .embed-responsive-item {
+    //    height: 100%;
+    //    width: 100%;
+    //  }
+    //}
+
+    .slick-track {
+      @include media-breakpoint-down(sm) {
+        margin-top: 50px;
+      }
+    }
+  }
+
+  &--booking-widget {
+    position: relative;
+    width: 100%;
+    min-height: 170px;
+
+    @include media-breakpoint-down(sm) {
+      position: fixed;
+      top: 0;
+      margin-top: 44px;
+      z-index: 3;
+    }
+
+    @include media-breakpoint-up(md) {
+      & + div {
+        visibility: hidden;
+      }
+    }
+  }
+
+  &--top-info {
+    flex-wrap: wrap;
+    display: flex;
+    left: 0;
+    color: #ffffff;
+    padding: 0;
+    position: absolute;
+    bottom: 25%;
+    transform: translateY(25%);
+    width: 100%;
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+      padding-left: 2rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      transform: translateY(calc(50% - 70px));
+      bottom: 50%;
+    }
+
+    a {
+      @include media-breakpoint-down(lg) {
+        width: auto;
+        min-width: 30rem;
+        justify-content: center;
+      }
+
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+      }
+    }
+  }
+
+  &--bottom-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: auto;
+    background-color: $gray-user;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    width: 100%;
+    z-index: 2;
+
+    @include media-breakpoint-up(md) {
+      height: 170px;
+      padding: 0;
+    }
+
+    @include media-breakpoint-up(lg) {
+      background-color: $white;
+      bottom: 3rem;
+      padding-left: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    > .full-height--row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    p {
+      color: $blue4;
+      font-size: 1.4rem;
+      font-weight: 400;
+      letter-spacing: 0.4px;
+      margin-bottom: 1rem;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 1.8rem;
+        letter-spacing: 0.6px;
+        margin-bottom: 0;
+      }
+    }
+
+    &--link {
+      color: $orange;
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+
+      @include media-breakpoint-up(md) {
+        font-size: 1.4rem;
+        letter-spacing: normal;
+        text-transform: inherit;
+      }
+
+      @include media-breakpoint-up(lg) {
+        font-size: 1.8rem;
+        margin-left: 2rem;
+      }
+
+      &:hover {
+        color: $orange;
+      }
+    }
+
+    .border-r {
+      @include media-breakpoint-up(lg) {
+        position: relative;
+
+        &:after {
+          content: '';
+          display: block;
+          border: .05rem solid $gray5;
+          height: 80%;
+          position: absolute;
+          right: 15px;
+        }
+      }
+    }
+
+    &--travel {
+      color: $gray1;
+      font-size: 1.6rem;
+      letter-spacing: normal;
+      padding: 1rem 1rem 0;
+      text-align: left;
+
+      @include media-breakpoint-up(lg) {
+        padding-left: 0;
+        padding-top: 0;
+        text-align: center;
+      }
+    }
+
+    &--btns {
+      @include media-breakpoint-down(sm) {
+        display: flex;
+        padding: 1rem;
+        gap: 1rem;
+
+        a {
+          &:first-child,
+          &:first-of-type {
+            border-right: .005rem solid white;
+          }
+
+          &:last-child,
+          &:last-of-type {
+            border-left: .005rem solid white;
+          }
+
+          height: 47px;
+
+          span {
+            width: 100%;
+            justify-content: center;
+            display: flex;
+          }
+        }
+      }
+      /*a {
+        i {
+          display: inline;
+          vertical-align: middle;
+        }
+      }*/
+    }
+
+    .fixed-bottom-mobile {
+      @include media-breakpoint-up(sm) {
+        display: none;
+      }
+
+      @include media-breakpoint-down(sm) {
+        box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        -o-box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        -webkit-box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        background-color: $white;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0;
+        z-index: 999;
+      }
+    }
+    //Orange version - TODO: CHECK IF STILL USED, MAYBE NOT
+    &.orange {
+      @include media-breakpoint-up(lg) {
+        background-color: $orange;
+
+        .sc-hero--bottom-info--travel,
+        .sc-hero--bottom-info--btns a,
+        .sc-hero--bottom-info--link,
+        p {
+          color: white;
+        }
+
+        .sc-hero--bottom-info--link {
+          text-decoration: underline;
+        }
+
+        .sc-hero--bottom-info--btns {
+          a {
+            background-color: $white;
+            color: $orange;
+
+            &:focus,
+            &:hover {
+              background-color: $white;
+              color: $orange;
+            }
+
+            &[disabled] {
+              background-color: $gray5;
+              opacity: 1;
+            }
+
+            .gnv-icon {
+              vertical-align: middle;
+            }
+          }
+        }
+
+        .border-r {
+          &:after {
+            border-color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  &--bkg {
+    background-position: center;
+    background-size: cover;
+  }
+  //General inner style
+  h1 {
+    display: inline-block;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: 0;
+
+    @include media-breakpoint-up(md) {
+      font-size: 4rem;
+    }
+
+    span {
+      clear: left;
+      display: inline-block;
+      float: left;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .gnv-btn {
+    @include media-breakpoint-up(lg) {
+      font-size: 1.8rem;
+    }
+  }
+}
