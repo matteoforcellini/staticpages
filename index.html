@@ -5,22 +5,25 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flag-icons/6.11.0/css/flag-icons.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css">
     <link rel="stylesheet" href="styles/gnv-styles/app.css">
     <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Internal Pages</title>
   </head>
   <body>
+
   <!-- SECTION HEADER BANNER START -->
-  <div class="container-fluid">
+  <div class="container-fluid d-none">
     <div class="row">
-      <div class="sectionDescription">
-        <div class="linkFigma"><h3>HEADER BANNER</h3></div></div>
+      <div class="col">
+        <div class="sectionDescription">
+          <div class="linkFigma"><h3>HEADER BANNER</h3></div></div>
       </div>
+      </div>
+
     </div>
   </div>
-  <section class="headerBanner">
+  <section class="headerBanner d-none">
     <svg width="0" height="0">
       <defs>
         <clipPath id="mask1" clipPathUnits="objectBoundingBox">
@@ -46,6 +49,119 @@
   </section>
   <!-- SECTION HEADER BANNER END-->
 
+  <!-- SECTION SIDE MENU -->
+  <div class="container-fluid mt-4">
+    <div class="row mb-4">
+      <div class="col">
+        <div class="sectionDescription">
+          <div class="linkFigma"><h3>SIDE MENU</h3></div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <!-- ADD CLASS sideMenu -->
+      <section class="col-md-3 sideMenu left-side-links">
+        <div class="togglable" data-id="collapse1">
+          <ul class="nav" id="nav-tab">
+            <li class="active">
+              <a class="nav-item nav-link active" href="#" target="">
+                myGNV
+              </a>
+            </li>
+            <li class="">
+              <a class="nav-item nav-link " href="#" target="">
+                Premi
+              </a>
+            </li>
+            <li class="">
+              <a class="nav-item nav-link " href="#" target="">
+                Accumulo punti
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </section>
+    </div>
+
+  </div>
+
+  <div class="container-fluid mt-4">
+    <div class="slider-container" role="navigation" aria-label="Menu di navigazione secondario">
+      <button id="prevBtn" class="gnv-icon-arrow-left sliderBtn" aria-label="Pulsante precedente" tabindex="0">
+        <span class="sr-only">Precedente</span>
+      </button>
+      <ul class="slider" id="slider">
+        <li class="slide active">
+          <a href="#" target="" aria-label="myGNV" tabindex="1">
+            myGNV
+          </a>
+        </li>
+        <li class="slide">
+          <a href="#" target="" aria-label="myGNV" tabindex="2">
+            myGNV
+          </a>
+        </li>
+        <li class="slide">
+          <a href="#" target="" aria-label="Premi" tabindex="3">
+            Premi
+          </a>
+        </li>
+        <li class="slide">
+          <a href="#" target="" aria-label="Accumulo Punti" tabindex="4">
+            Accumulo Punti
+          </a>
+        </li>
+        <li class="slide">
+          <a href="#" target="" aria-label="myGNV" tabindex="5">
+            myGNV
+          </a>
+        </li>
+        <li class="slide">
+          <a href="#" target="" aria-label="Premi" tabindex="6">
+            Premi
+          </a>
+        </li>
+        <li class="slide">
+          <a href="#" target="" aria-label="Lorem Ipsum" tabindex="7">
+            Lorem Ipsum
+          </a>
+        </li>
+        <li class="slide">
+          <a href="#" target="" aria-label=" Accumulo Punti" tabindex="8">
+            Accumulo Punti
+          </a>
+        </li>
+      </ul>
+      <button id="nextBtn" class="gnv-icon-arrow-right sliderBtn" aria-label="Pulsante successivo" tabindex="1">
+        <span class="sr-only">Successivo</span>
+      </button>
+    </div>
+
+  </div>
+
+
+
+  <!-- SECTION SIDE MENU END-->
+  <hr class="my-5">
+  <!-- SECTION COL TEMPLATE STYLE 1 -->
+  <div class="container-fluid mt-4">
+    <div class="row mb-4">
+      <div class="col">
+      <div class="sectionDescription">
+        <div class="linkFigma"><h3>COL TEMPLATE STYLE 1</h3></div>
+      </div>
+      </div>
+    </div>
+    <div class="row">
+      <section class="columnTemplate">
+
+      </section>
+    </div>
+
+  </div>
+  <!-- SECTION COL TEMPLATE STYLE 1-->
   <script type="module" src="/main.js"></script>
   </body>
 </html>
