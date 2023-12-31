@@ -1,192 +1,255 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css">
     <link rel="stylesheet" href="styles/gnv-styles/app.css">
     <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Internal Pages</title>
-  </head>
-  <body>
+</head>
+<body>
 
-  <!-- SECTION HEADER BANNER START -->
-  <div class="container-fluid d-none">
+<!-- SECTION HEADER BANNER START -->
+<div class="container-fluid d-none">
     <div class="row">
-      <div class="col">
-        <div class="sectionDescription">
-          <div class="linkFigma"><h3>HEADER BANNER</h3></div></div>
-      </div>
-      </div>
-
-    </div>
-  </div>
-  <section class="headerBanner d-none">
-    <svg width="0" height="0">
-      <defs>
-        <clipPath id="mask1" clipPathUnits="objectBoundingBox">
-          <path id="wave"
-                transform="scale(0.00135, 0.00254)"
-                  d="M1440 .2H0v251.9s382-27.8 731 30.8 709-.5 709-.5V.2z"/>
-        </clipPath>
-      </defs>
-    </svg>
-    <img src="assets/banner_hero_img_1.jpeg">
-    <div class="container-fluid">
-      <div class="row">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb headerBanner__breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Library</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Data</li>
-          </ol>
-        </nav>
-      </div>
+        <div class="col">
+            <div class="sectionDescription">
+                <div class="linkFigma"><h3>HEADER BANNER</h3></div>
+            </div>
+        </div>
     </div>
 
-  </section>
-  <!-- SECTION HEADER BANNER END-->
+</div>
+</div>
+<section class="headerBanner">
 
-  <!-- SECTION SIDE MENU -->
-  <div class="container-fluid mt-4">
+    <div class="headerBanner__wrapper">
+        <div class="headerBanner__img">
+            <svg
+                    class="headerBanner__svg"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1440.4 360"
+                 style="enable-background:new 0 0 1440.4 360" xml:space="preserve">
+  <g style="opacity:.54">
+    <linearGradient id="a" gradientUnits="userSpaceOnUse" x1=".159" y1="274.735" x2="1440.159" y2="274.735"
+                    gradientTransform="matrix(1 0 0 -1 0 454.735)">
+      <stop offset="0" style="stop-color:#0047ba"/>
+        <stop offset="1" style="stop-color:#0047ba;stop-opacity:0"/>
+    </linearGradient>
+      <path d="M1440.2 2.2H.2v267.1s382-12.6 731 45.9 709 39.8 709 39.8V2.2z" style="fill:url(#a)"/>
+  </g>
+                <defs>
+    <path id="b" d="M1440.2.2H.2v251.9s382-27.8 731 30.8 709-.5 709-.5V.2z"/>
+  </defs>
+                <clipPath id="c">
+    <use xlink:href="#b" style="overflow:visible"/>
+  </clipPath>
+                <g style="clip-path:url(#c)">
+    <image class="imgSrc"
+           preserveAspectRatio="xMidYMid slice"
+           style="overflow:visible" width="1280" height="853" xlink:href="assets/banner_hero_img_1.jpeg"
+           transform="translate(-10.55 -206.921) scale(1.1821)"/>
+  </g>
+                <defs>
+    <filter id="d" filterUnits="userSpaceOnUse" x=".2" y="0" width="1440" height="360">
+      <feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0"/>
+    </filter>
+  </defs>
+                <mask maskUnits="userSpaceOnUse" x=".2" y="0" width="1440" height="360" id="e">
+    <path d="M1440.2 0H.2v251.9s382-27.8 731 30.8 709-.5 709-.5V0z" style="fill:#fff;filter:url(#d)"/>
+  </mask>
+                <g style="mask:url(#e)">
+    <path
+            class="overlay"
+            d="M.2 0h1440v360H.2V0z" style="enable-background:new"/>
+  </g>
+                <path d="M.2 242s382-40.8 731 17.8c349 58.5 709-10.5 709-10.5"
+                      style="fill:none;stroke:#dae0e7;stroke-width:3;stroke-opacity:.4"/>
+</svg>
+        </div>
+
+        <div class="headerBanner__elements">
+            <div class="container-fluid">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb headerBanner__breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Library</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Data</li>
+                    </ol>
+                </nav>
+                <h1 class="headerBanner__title">Ristorazione</h1>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</section>
+<!-- SECTION HEADER BANNER END-->
+
+<!-- SECTION SIDE MENU -->
+<div class="container-fluid mt-4">
     <div class="row mb-4">
-      <div class="col">
-        <div class="sectionDescription">
-          <div class="linkFigma"><h3>SIDE MENU</h3></div>
+        <div class="col">
+            <div class="sectionDescription">
+                <div class="linkFigma"><h3>SIDE MENU</h3></div>
+            </div>
         </div>
-      </div>
 
     </div>
     <div class="row">
-      <!-- ADD CLASS sideMenu -->
-      <section class="col-md-3 sideMenu left-side-links">
-        <div class="togglable" data-id="collapse1">
-          <ul class="nav" id="nav-tab">
-            <li class="active">
-              <a class="nav-item nav-link active" href="#" target="">
-                myGNV
-              </a>
-            </li>
-            <li class="">
-              <a class="nav-item nav-link " href="#" target="">
-                Premi
-              </a>
-            </li>
-            <li class="">
-              <a class="nav-item nav-link " href="#" target="">
-                Accumulo punti
-              </a>
-            </li>
+        <!-- ADD CLASS sideMenu -->
+        <section class="col-md-3 sideMenu left-side-links">
+            <div class="togglable" data-id="collapse1">
+                <ul class="nav" id="nav-tab">
+                    <li class="active">
+                        <a class="nav-item nav-link active" href="#" target="">
+                            myGNV
+                        </a>
+                    </li>
+                    <li class="">
+                        <a class="nav-item nav-link " href="#" target="">
+                            Premi
+                        </a>
+                    </li>
+                    <li class="">
+                        <a class="nav-item nav-link " href="#" target="">
+                            Accumulo punti
+                        </a>
+                    </li>
 
-          </ul>
-        </div>
-      </section>
+                </ul>
+            </div>
+        </section>
     </div>
 
-  </div>
+</div>
 
-  <div class="container-fluid mt-4">
+<div class="container-fluid mt-4">
     <div class="slider-container" role="navigation" aria-label="Menu di navigazione secondario">
-      <button id="prevBtn" class="gnv-icon-arrow-left sliderBtn" aria-label="Pulsante precedente" tabindex="0">
-        <span class="sr-only">Precedente</span>
-      </button>
-      <ul class="slider" id="slider">
-        <li class="slide active">
-          <a href="#" target="" aria-label="myGNV" tabindex="1">
-            myGNV
-          </a>
-        </li>
-        <li class="slide">
-          <a href="#" target="" aria-label="myGNV" tabindex="2">
-            myGNV
-          </a>
-        </li>
-        <li class="slide">
-          <a href="#" target="" aria-label="Premi" tabindex="3">
-            Premi
-          </a>
-        </li>
-        <li class="slide">
-          <a href="#" target="" aria-label="Accumulo Punti" tabindex="4">
-            Accumulo Punti
-          </a>
-        </li>
-        <li class="slide">
-          <a href="#" target="" aria-label="myGNV" tabindex="5">
-            myGNV
-          </a>
-        </li>
-        <li class="slide">
-          <a href="#" target="" aria-label="Premi" tabindex="6">
-            Premi
-          </a>
-        </li>
-        <li class="slide">
-          <a href="#" target="" aria-label="Lorem Ipsum" tabindex="7">
-            Lorem Ipsum
-          </a>
-        </li>
-        <li class="slide">
-          <a href="#" target="" aria-label=" Accumulo Punti" tabindex="8">
-            Accumulo Punti
-          </a>
-        </li>
-      </ul>
-      <button id="nextBtn" class="gnv-icon-arrow-right sliderBtn" aria-label="Pulsante successivo" tabindex="1">
-        <span class="sr-only">Successivo</span>
-      </button>
+        <button id="prevBtn" class="gnv-icon-arrow-left sliderBtn" aria-label="Pulsante precedente" tabindex="0">
+            <span class="sr-only">Precedente</span>
+        </button>
+        <ul class="slider" id="slider">
+            <li class="slide active">
+                <a href="#" target="" aria-label="myGNV" tabindex="1">
+                    myGNV
+                </a>
+            </li>
+            <li class="slide">
+                <a href="#" target="" aria-label="myGNV" tabindex="2">
+                    myGNV
+                </a>
+            </li>
+            <li class="slide">
+                <a href="#" target="" aria-label="Premi" tabindex="3">
+                    Premi
+                </a>
+            </li>
+            <li class="slide">
+                <a href="#" target="" aria-label="Accumulo Punti" tabindex="4">
+                    Accumulo Punti
+                </a>
+            </li>
+            <li class="slide">
+                <a href="#" target="" aria-label="myGNV" tabindex="5">
+                    myGNV
+                </a>
+            </li>
+            <li class="slide">
+                <a href="#" target="" aria-label="Premi" tabindex="6">
+                    Premi
+                </a>
+            </li>
+            <li class="slide">
+                <a href="#" target="" aria-label="Lorem Ipsum" tabindex="7">
+                    Lorem Ipsum
+                </a>
+            </li>
+            <li class="slide">
+                <a href="#" target="" aria-label=" Accumulo Punti" tabindex="8">
+                    Accumulo Punti
+                </a>
+            </li>
+        </ul>
+        <button id="nextBtn" class="gnv-icon-arrow-right sliderBtn" aria-label="Pulsante successivo" tabindex="1">
+            <span class="sr-only">Successivo</span>
+        </button>
     </div>
 
-  </div>
-  <!-- SECTION SIDE MENU END-->
-  <hr class="my-5">
-  <!-- SECTION COL TEMPLATE STYLE 1 -->
-  <div class="container-fluid mt-4">
+</div>
+<!-- SECTION SIDE MENU END-->
+<hr class="my-5">
+<!-- SECTION COL TEMPLATE STYLE 1 -->
+<div class="container-fluid mt-4">
     <div class="row mb-4">
-      <div class="col">
-      <div class="sectionDescription">
-        <div class="linkFigma"><h3>COL TEMPLATE STYLE 1</h3></div>
-      </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <section class="columnTemplate">
-          <h2 class="columnTemplate__heading">
-            Bimbi
-          </h2>
-          <p class="columnTemplate__subHeading">Viaggiare con i bambini in traghetto</p>
-          <img src="https://loremflickr.com/880/260?random=1" alt="" class="img-fluid columnTemplate__img">
-          <div class="columnTemplate__content"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
-        </section>
-      </div>
-
-    </div>
-
-  </div>
-  <!-- SECTION COL TEMPLATE STYLE 1-->
-  <hr class="my-5">
-  <!-- SECTION COL TEMPLATE STYLE 2 -->
-  <div class="container-fluid mt-4">
-    <div class="row mb-4">
-      <div class="col">
-        <div class="sectionDescription">
-          <div class="linkFigma"><h3>COL TEMPLATE STYLE 2</h3></div>
+        <div class="col">
+            <div class="sectionDescription">
+                <div class="linkFigma"><h3>COL TEMPLATE STYLE 1</h3></div>
+            </div>
         </div>
-      </div>
     </div>
     <div class="row">
-      <div class="col">
-        <section class="columnTemplateTwo">
+        <div class="col">
+            <section class="columnTemplate">
+                <h2 class="columnTemplate__heading">
+                    Bimbi
+                </h2>
+                <p class="columnTemplate__subHeading">Viaggiare con i bambini in traghetto</p>
+                <img src="https://loremflickr.com/880/260?random=1" alt="" class="img-fluid columnTemplate__img">
+                <div class="columnTemplate__content"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </section>
+        </div>
 
-        </section>
-      </div>
     </div>
 
-  </div>
-  <!-- SECTION COL TEMPLATE STYLE 2-->
-  <script type="module" src="/main.js"></script>
-  </body>
+</div>
+<!-- SECTION COL TEMPLATE STYLE 1-->
+<hr class="my-5">
+<!-- SECTION COL TEMPLATE STYLE 2 -->
+<div class="container-fluid mt-4">
+    <div class="row mb-4">
+        <div class="col">
+            <div class="sectionDescription">
+                <div class="linkFigma"><h3>COL TEMPLATE STYLE 2</h3></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <section class="columnTemplateTwo">
+                <div class="columnTemplateTwo__content">
+                    <div class="columnTemplateTwo__textWrapper">
+                        <p>Vacanze in Tunisia? Comincia a viverle già in mare, con i nostri menu pensati per farti
+                            sentire già a destinazione.
+                            Entra subito in contatto con la cultura tunisina, assaggiando la merguez in umido, tipica
+                            salsiccia fresca piccante della cucina maghrebina, o lo spezzatino di agnello con verdure,
+                            profumato come la terra da cui proviene.</p>
+                    </div>
+                    <button class="btn btn-link columnTemplateTwo__btn">
+                        <i class="gnv-icon-download"></i>
+                        Menù Self–service Tunisia
+                    </button>
+
+                </div>
+                <div class="columnTemplateTwo__image">
+                    <label>Baleari</label>
+                    <img src="https://loremflickr.com/300/300?random=1" alt="">
+                </div>
+            </section>
+        </div>
+    </div>
+
+</div>
+<!-- SECTION COL TEMPLATE STYLE 2-->
+<script type="module" src="/main.js"></script>
+</body>
 </html>

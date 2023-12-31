@@ -1,0 +1,40 @@
+<svg
+        class="headerBanner__svg"
+        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1440.4 360"
+        style="enable-background:new 0 0 1440.4 360" xml:space="preserve">
+  <g style="opacity:.54">
+    <linearGradient id="a" gradientUnits="userSpaceOnUse" x1=".159" y1="274.735" x2="1440.159" y2="274.735"
+                    gradientTransform="matrix(1 0 0 -1 0 454.735)">
+      <stop offset="0" style="stop-color:#0047ba"/>
+      <stop offset="1" style="stop-color:#0047ba;stop-opacity:0"/>
+    </linearGradient>
+    <path d="M1440.2 2.2H.2v267.1s382-12.6 731 45.9 709 39.8 709 39.8V2.2z" style="fill:url(#a)"/>
+  </g>
+  <defs>
+    <path id="b" d="M1440.2.2H.2v251.9s382-27.8 731 30.8 709-.5 709-.5V.2z"/>
+  </defs>
+  <clipPath id="c">
+    <use xlink:href="#b" style="overflow:visible"/>
+  </clipPath>
+  <g style="clip-path:url(#c)">
+    <image class="imgSrc"
+           preserveAspectRatio="xMidYMid slice"
+           style="overflow:visible" width="1280" height="853" xlink:href="assets/banner_hero_img_1.jpeg"
+           transform="translate(-10.55 -206.921) scale(1.1821)"/>
+  </g>
+  <defs>
+    <filter id="d" filterUnits="userSpaceOnUse" x=".2" y="0" width="1440" height="360">
+      <feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0"/>
+    </filter>
+  </defs>
+  <mask maskUnits="userSpaceOnUse" x=".2" y="0" width="1440" height="360" id="e">
+    <path d="M1440.2 0H.2v251.9s382-27.8 731 30.8 709-.5 709-.5V0z" style="fill:#fff;filter:url(#d)"/>
+  </mask>
+  <g style="mask:url(#e)">
+    <path
+            class="overlay"
+            d="M.2 0h1440v360H.2V0z" style="enable-background:new"/>
+  </g>
+  <path d="M.2 242s382-40.8 731 17.8c349 58.5 709-10.5 709-10.5"
+        style="fill:none;stroke:#dae0e7;stroke-width:3;stroke-opacity:.4"/>
+</svg>

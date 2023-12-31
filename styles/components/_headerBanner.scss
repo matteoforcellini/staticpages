@@ -1,23 +1,22 @@
 .headerBanner {
   position: relative;
-  min-height: 320px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  img {
-    width: 100%;
-    clip-path: url(#mask1);
-    -webkit-clip-path: url(#mask1);
-  }
-
-  &:after {
-    content: "";
+  min-height: 24vw;
+  &__svg {
     position: absolute;
-    left: 0;
-    width: 100%;
-    background-size: cover;
-    background-image: url("assets/desktop-hero-banner-onda.svg");
+    top:0;
+    left:0;
+    z-index: 1;
+    .overlay {
+      opacity: 0.5;
+    }
+  }
+  &__elements{
+    position: relative;
+    top:0;
+    left:0;
     z-index:2;
-
+  }
+  &__title {
+    color: $gnv-white;
   }
 }
