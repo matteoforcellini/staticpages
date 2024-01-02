@@ -9,14 +9,15 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "sass": "^1.0.0",
     "vite": "^5.0.8",
-    "sass": "^1.0.0"
+    "vite-plugin-handlebars": "^2.0.0"
   },
   "dependencies": {
-    "sass": "^1.69.5",
-    "node-sass": "^7.0.1",
     "bootstrap": "^4.4.1",
-    "slick-carousel": "^1.8.1",
-    "bootstrap-block-grid": "^1.1.7"
+    "bootstrap-block-grid": "^1.1.7",
+    "node-sass": "^7.0.1",
+    "sass": "^1.69.5",
+    "slick-carousel": "^1.8.1"
   }
 }

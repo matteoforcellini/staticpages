@@ -1,4 +1,5 @@
-import './style.scss'
+import './style.scss';
+import './accordion.js';
 $(document).ready(function() {
     function handleMenuSlider() {
         const slider = document.getElementById('slider');
@@ -84,8 +85,6 @@ $(document).ready(function() {
         // Inizializza la visibilità delle frecce
         updateButtonVisibility();
     }
-
     handleMenuSlider();
-
 });
 
