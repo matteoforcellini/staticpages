@@ -13,7 +13,7 @@
 <body>
 
 <!-- SECTION HEADER BANNER START -->
-<div class="container-fluid d-none">
+<div class="container-fluid">
     <div class="row">
         <div class="col">
             <div class="sectionDescription">
@@ -25,11 +25,9 @@
 </div>
 </div>
 <section class="headerBanner">
-
     <div class="headerBanner__wrapper">
         <div class="headerBanner__img">
-            <svg
-                    class="headerBanner__svg"
+            <svg class="headerBanner__svg"
                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1440.4 360"
                  style="enable-background:new 0 0 1440.4 360" xml:space="preserve">
   <g style="opacity:.54">
@@ -70,8 +68,48 @@
 </svg>
         </div>
 
+        <div class="headerBanner__img --mobile">
+            <svg  class="headerBanner__svg"
+                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 320 248">
+                <g opacity=".54">
+                    <linearGradient id="A" gradientUnits="userSpaceOnUse" x1="0" y1="121.297" x2="371.515" y2="121.297">
+                        <stop offset="0" stop-color="#0047ba" />
+                        <stop offset=".831" stop-color="#0047ba" stop-opacity=".45" />
+                        <stop offset="1" stop-color="#0047ba" stop-opacity="0" />
+                    </linearGradient>
+                    <path d="M320,0H0v198.8c56.7,6.1,114.3,13.7,171,23.2c49.8,8.3,99.8,15.1,149,20.6V0z" fill="url(#A)" />
+                </g>
+                <defs>
+                    <filter id="B" filterUnits="userSpaceOnUse" x="-76" y="-41" width="428" height="366">
+                        <feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0" />
+                    </filter>
+                </defs>
+                <mask maskUnits="userSpaceOnUse" x="-76" y="-41" width="428" height="366" id="C">
+                    <path d="M320 0H0v192.7c56.7 5 114.3 11.7 171 20.4 49.8 7.7 99.8 13.2 149 16.9V0z" fill="#d9d9d9" filter="url(#B)" />
+                </mask>
+                <g mask="url(#C)">
+                    <image
+                            class="imgSrc"
+                            preserveAspectRatio="xMidYMid slice"
+                            width="320" height="231" xlink:href="assets/banner_hero_img_2.png" transform="translate(-1 -.5)" overflow="visible" />
+                </g>
+                <defs>
+                    <filter id="D" filterUnits="userSpaceOnUse" x="0" y="0" width="320" height="230">
+                        <feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0" />
+                    </filter>
+                </defs>
+                <mask maskUnits="userSpaceOnUse" x="0" y="0" width="320" height="230" id="E">
+                    <path d="M320 0H0v192.7c56.7 5 114.3 11.7 171 20.4 49.8 7.7 99.8 13.2 149 16.9V0z" fill="#d9d9d9" filter="url(#D)" />
+                </mask>
+                <g mask="url(#E)">
+                    <path   class="overlay"
+                            d="M0 0h320v230H157.2 0V0z" enable-background="new" />
+                </g>
+            </svg>
+        </div>
+
         <div class="headerBanner__elements">
-            <div class="container-fluid">
+            <div class="container">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb headerBanner__breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -79,6 +117,8 @@
                         <li class="breadcrumb-item active" aria-current="page">Data</li>
                     </ol>
                 </nav>
+            </div>
+            <div class="container --titleContainer">
                 <h1 class="headerBanner__title">Ristorazione</h1>
             </div>
         </div>
