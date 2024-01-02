@@ -6,14 +6,20 @@ html, body {
   align-items: center;
   justify-content: space-between;
   .VIS {
-    font-size: 2rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: deeppink;
+    @media screen  and (min-width:576px){
+      font-size: 2rem;
+    }
   }
   h3 {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight:900;
     text-align: center;
+    @media screen  and (min-width:576px){
+      font-size: 3rem;
+    }
   }
 }
 
@@ -26,6 +32,9 @@ html, body {
     border-top: 1px solid #ddd;
     .VIS {
       opacity: 0;
+    }
+    .sectionDescription h3 {
+      color: rgba(grey, .9);
     }
     &.visible {
       .VIS {

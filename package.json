@@ -11,7 +11,7 @@
   "devDependencies": {
     "sass": "^1.0.0",
     "vite": "^5.0.8",
-    "vite-plugin-handlebars": "^2.0.0"
+    "vite-plugin-handlebars": "^1.6.0"
   },
   "dependencies": {
     "bootstrap": "^4.4.1",

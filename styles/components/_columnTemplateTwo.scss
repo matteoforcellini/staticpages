@@ -1,3 +1,103 @@
-.columnTemplateTwo {
+@import "styles/colors";
 
+// Common styles
+.columnTemplateTwo {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 350px;
+  &__imageWrapper {
+    position: relative;
+    @include media-breakpoint-up(lg) {
+     position: absolute;
+      width: 32%;
+    }
+    label {
+      position: absolute;
+      top: 15px;
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: $gnv-white;
+      background-color: rgba($blue5, .6);
+      padding: 8px 15px;
+      margin: 0;
+    }
+    img {
+      display: block;
+      width: 100%;
+      border-radius: 12px;
+      height: 150px;
+      @include media-breakpoint-up(lg) {
+        height: 30%;
+      }
+      object-fit: cover;
+    }
+  }
+  &__content {
+    position: relative;
+    width: 100%;
+    z-index:2;
+    background-color: $gnv-white;
+    border: 1px solid $light-gray2;
+    border-radius: 12px;
+    padding: 12px;
+    transition: .2s all linear;
+    @include media-breakpoint-up(lg) {
+      top: 50px;
+      position: absolute;
+      width: 72%;
+      left: 0;
+      padding: 20px;
+      // max-height: 236px;
+    }
+  }
+  &__textWrapper, &__textWrapper p  {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    color: $gray1;
+  }
+  &__btn {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    color: $blue4;
+    font-weight: 700;
+    i {
+      margin-right: 5px;
+    }
+  }
+}
+// Right
+.columnTemplateTwo.--right {
+  @include media-breakpoint-up(lg) {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+  }
+  .columnTemplateTwo__imageWrapper {
+    label {
+      left: unset;
+      right: 0;
+      border-bottom-left-radius: 12px;
+      border-top-left-radius: 12px;
+    }
+  }
+}
+
+// Left
+.columnTemplateTwo:not(.--right) {
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .columnTemplateTwo__imageWrapper {
+    left: 0;
+    label {
+      left: 0;
+      right: unset;
+      border-bottom-right-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+  }
 }
