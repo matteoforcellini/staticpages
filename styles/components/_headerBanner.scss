@@ -79,7 +79,9 @@ $overlayOpacity: 0.5;
     .container {
       @include media-breakpoint-up(sm) {
         width: 100%;
-        max-width: none;
+        max-width: 1440px;
+        padding-left: 0;
+        padding-right: 0;
       }
       &.--titleContainer {
         margin-top: 2.2rem;

@@ -1,5 +1,12 @@
 @import "styles/colors";
 
+$contentPaddingMobile: 15px;
+$contentPaddingDesktop: 20px;
+$contentOffsetMobileY: -45px;
+$contentOffsetX: -3%;
+$contentOffsetDesktopY: 30%;
+
+
 @mixin shadowElm {
   content: "";
   position: absolute;
@@ -17,23 +24,32 @@
 
 // Common styles
 .columnTemplateTwo {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  min-height: 350px;
-  &__innerImageWrapper {
-    position: relative;
-    z-index:2;
+  @include media-breakpoint-up(lg) {
+    height: 135%;
   }
+
+  &.--imageOnRight {
+    @include media-breakpoint-up(lg) {
+      .row > *:nth-child(1) {
+        order: 2;
+      }
+      .row > *:nth-child(2) {
+        order: 1;
+      }
+    }
+
+  }
+
   &__imageWrapper {
     position: relative;
     @include media-breakpoint-up(lg) {
-     position: absolute;
-      width: 32%;
+      height: 100%;
     }
+
     &:after {
       @include shadowElm()
     }
+
     &:after {
       display: none;
       z-index: 1;
@@ -42,6 +58,7 @@
         display: block;
       }
     }
+
     label {
       position: absolute;
       top: 15px;
@@ -52,76 +69,77 @@
       padding: 8px 15px;
       margin: 0;
     }
-    img {
-      display: block;
-      width: 100%;
-      border-radius: 12px;
-      height: 150px;
-      @include media-breakpoint-up(lg) {
-        height: 30%;
-      }
-      object-fit: cover;
+  }
+
+  &__innerImageWrapper {
+    position: relative;
+    z-index: 2;
+    border-radius: 12px;
+    height: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    @include media-breakpoint-up(lg) {
+      height: 100%;
     }
   }
-  &__content {
-    top: 90px;
-    position: absolute;
-    width: 100%;
-    z-index:2;
 
+  &__content {
+    position: relative;
+    z-index: 3;
     border-radius: 12px;
+    border: 1px solid $light-gray2;
+    top: $contentOffsetMobileY;
     transition: .2s all linear;
     background-color: $gnv-white;
+    @include media-breakpoint-up(lg) {
+      padding: $contentPaddingDesktop;
+    }
+
     &:after {
       @include shadowElm()
     }
+
     &:after {
       @include media-breakpoint-up(lg) {
         display: none;
       }
     }
-    @include media-breakpoint-up(lg) {
-      top: 50px;
-      position: absolute;
-      width: 72%;
-    }
-    @include media-breakpoint-up(xl) {
-      top: 90px;
-    }
   }
+
   &__contentInnerWrapper {
-    padding: 12px;
+    position: relative;
     background-color: $gnv-white;
-    border: 1px solid $light-gray2;
     border-radius: 12px;
+    padding: $contentPaddingMobile;
     @include media-breakpoint-up(lg) {
-      padding: 20px;
+      padding: $contentPaddingDesktop;
     }
   }
-  &__textWrapper, &__textWrapper p  {
+
+  &__textWrapper, &__textWrapper p {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 2.2rem;
     color: $gray1;
   }
+
   &__btn {
     font-family: 'Lato', sans-serif;
     font-size: 1.6rem;
     line-height: 2.2rem;
     color: $blue4;
     font-weight: 700;
+
     i {
       margin-right: 5px;
     }
   }
 }
-// Right
-.columnTemplateTwo.--right {
-  @include media-breakpoint-up(lg) {
-    flex-direction: row-reverse;
-    justify-content: flex-start;
-  }
+
+// Image on Right
+.columnTemplateTwo.--imageOnRight {
   .columnTemplateTwo__imageWrapper {
     label {
       left: unset;
@@ -130,21 +148,19 @@
       border-top-left-radius: 12px;
     }
   }
+
   .columnTemplateTwo__content {
     @include media-breakpoint-up(lg) {
-      left: 0;
+      top: $contentOffsetDesktopY;
+      right: $contentOffsetX;
+      padding: $contentPaddingDesktop;
     }
   }
 }
 
-// Left
-.columnTemplateTwo:not(.--right) {
-  @include media-breakpoint-up(lg) {
-    flex-direction: row;
-    justify-content: flex-start;
-  }
+// Image on Left
+.columnTemplateTwo:not(.--imageOnRight) {
   .columnTemplateTwo__imageWrapper {
-    left: 0;
     label {
       left: 0;
       right: unset;
@@ -152,9 +168,12 @@
       border-top-right-radius: 12px;
     }
   }
+
   .columnTemplateTwo__content {
     @include media-breakpoint-up(lg) {
-      right: 0;
+      top: $contentOffsetDesktopY;
+      left: $contentOffsetX;
+      padding: $contentPaddingDesktop;
     }
   }
 }
