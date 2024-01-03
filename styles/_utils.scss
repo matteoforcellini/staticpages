@@ -1,5 +1,6 @@
 html, body {
   width: 100%;
+  background-color: #f2f5f6;
 }
 .sectionDescription {
   display: flex;
@@ -49,7 +50,7 @@ html, body {
   }
 
   &-button {
-    background-color: #f7f7f7;
+    background-color: #d9d9d9;
     color: #333;
     cursor: pointer;
     padding: 10px 20px;
@@ -65,7 +66,7 @@ html, body {
   &-content {
     display: none;
     padding: 20px;
-    background-color: white;
+    background-color: #f2f5f6;
     overflow: visible;
     transition: max-height 0.2s ease-out;
   }
