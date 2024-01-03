@@ -1,16 +1,46 @@
 @import "styles/colors";
 
+@mixin shadowElm {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  background-color: $light-gray2;
+  right: 0;
+  bottom: -13px;
+  height: 50px;
+  width: calc(100% - 50px);
+  margin: auto;
+  border-radius: 15px;
+  z-index: -1;
+}
+
 // Common styles
 .columnTemplateTwo {
   display: flex;
   flex-direction: column;
   position: relative;
   min-height: 350px;
+  &__innerImageWrapper {
+    position: relative;
+    z-index:2;
+  }
   &__imageWrapper {
     position: relative;
     @include media-breakpoint-up(lg) {
      position: absolute;
       width: 32%;
+    }
+    &:after {
+      @include shadowElm()
+    }
+    &:after {
+      display: none;
+      z-index: 1;
+      width: calc(100% - 30px);
+      @include media-breakpoint-up(lg) {
+        display: block;
+      }
     }
     label {
       position: absolute;
@@ -34,21 +64,38 @@
     }
   }
   &__content {
-    position: relative;
+    top: 90px;
+    position: absolute;
     width: 100%;
     z-index:2;
-    background-color: $gnv-white;
-    border: 1px solid $light-gray2;
+
     border-radius: 12px;
-    padding: 12px;
     transition: .2s all linear;
+    background-color: $gnv-white;
+    &:after {
+      @include shadowElm()
+    }
+    &:after {
+      @include media-breakpoint-up(lg) {
+        display: none;
+      }
+    }
     @include media-breakpoint-up(lg) {
       top: 50px;
       position: absolute;
       width: 72%;
-      left: 0;
+    }
+    @include media-breakpoint-up(xl) {
+      top: 90px;
+    }
+  }
+  &__contentInnerWrapper {
+    padding: 12px;
+    background-color: $gnv-white;
+    border: 1px solid $light-gray2;
+    border-radius: 12px;
+    @include media-breakpoint-up(lg) {
       padding: 20px;
-      // max-height: 236px;
     }
   }
   &__textWrapper, &__textWrapper p  {
@@ -83,6 +130,11 @@
       border-top-left-radius: 12px;
     }
   }
+  .columnTemplateTwo__content {
+    @include media-breakpoint-up(lg) {
+      left: 0;
+    }
+  }
 }
 
 // Left
@@ -98,6 +150,11 @@
       right: unset;
       border-bottom-right-radius: 12px;
       border-top-right-radius: 12px;
+    }
+  }
+  .columnTemplateTwo__content {
+    @include media-breakpoint-up(lg) {
+      right: 0;
     }
   }
 }
