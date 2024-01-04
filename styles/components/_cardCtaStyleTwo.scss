@@ -1,0 +1,171 @@
+$iconInnerMargin: 10px; // If you change this, change manually tabacchi icon as well
+
+.cardCtaStyleTwo {
+  background-image: url('assets/bg_card_cta_style_two_people.png'), linear-gradient(0deg, #004d8c 0%, #0078bb 9%, #0376ba 18%, #0372b6 28.000000000000004%, #006fb1 37%, #0264a6 51%, #0376ba 64%, #0075b8 75%, #0260a2 88%, #005090 100%);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  width: 100%;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  padding: 20px 12px 10px;
+  @include media-breakpoint-up(lg) {
+    padding: 30px 30px 15px;
+    background-size: 28%, auto;
+  }
+  &:after {
+    content: "";
+    top:0;
+    left: 0;
+    position: absolute;
+    background-image: url('assets/bg_card_cta_style_two_shop.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top left;
+    height: 120px;
+    width: 120px;
+    @include media-breakpoint-up(lg) {
+      height: 235px;
+      width: 235px;
+    }
+  }
+  &__wrapper {
+    position: relative;
+    z-index: 2;
+  }
+  &__header {
+    font-family: 'Lato', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: $gnv-white;
+    text-align: center;
+  }
+  &__description {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: rgba($gnv-white, .9);
+    text-align: center;
+  }
+  &.--darkOverlay, .--darkOverlay {
+    position: relative;
+    &:before {
+      content:'';
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      position: absolute;
+      background: linear-gradient(to bottom, #04253d, transparent);
+      opacity: .65;
+    }
+  }
+  &__gnvCardIconProducts {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-color: $gnv-white;
+    border-radius: 50%;
+    border:2px solid $lightPink;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-size: cover;
+      width: calc(100% - $iconInnerMargin);
+      height: calc(100% - $iconInnerMargin);
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+    &.--abbigliamento {
+      &:after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 24 24'%3E%3Cdefs%3E%3Cstyle%3E.cls-1,.cls-3%7Bfill:none;%7D.cls-2%7Bclip-path:url(%23clip-path);%7D.cls-3%7Bstroke:%231d518d;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;%7D%3C/style%3E%3CclipPath id='clip-path'%3E%3Crect class='cls-1' width='24' height='24'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='Livello_2' data-name='Livello 2'%3E%3Cg id='Livello_1-2' data-name='Livello 1'%3E%3Cg class='cls-2'%3E%3Cpath class='cls-3' d='M15,4l6,2v5H18v8a1,1,0,0,1-.29.71A1,1,0,0,1,17,20H7a1,1,0,0,1-.71-.29A1,1,0,0,1,6,19V11H3V6L9,4a3,3,0,0,0,.88,2.12,3,3,0,0,0,4.24,0A3,3,0,0,0,15,4Z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+    }
+    &.--accessori {
+      &:after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 24 24'%3E%3Cdefs%3E%3Cstyle%3E.cls-1,.cls-3%7Bfill:none;%7D.cls-2%7Bclip-path:url(%23clip-path);%7D.cls-3%7Bstroke:%231d518d;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;%7D%3C/style%3E%3CclipPath id='clip-path'%3E%3Crect class='cls-1' width='24' height='24'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='Livello_2' data-name='Livello 2'%3E%3Cg id='Livello_1-2' data-name='Livello 1'%3E%3Cg class='cls-2'%3E%3Cpath class='cls-3' d='M6,4a4,4,0,0,1,4,3.8V18.5a1.5,1.5,0,0,1-3,0V12H6A4,4,0,0,1,2,8.2V8A4,4,0,0,1,6,4Z'/%3E%3Cpath class='cls-3' d='M18,4a4,4,0,0,0-4,3.8V18.5a1.5,1.5,0,0,0,3,0V12h1a4,4,0,0,0,4-3.8V8a4,4,0,0,0-4-4Z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+    }
+    &.--cioccolato {
+      &:after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 24 24'%3E%3Cdefs%3E%3Cstyle%3E.cls-1,.cls-3%7Bfill:none;%7D.cls-2%7Bclip-path:url(%23clip-path);%7D.cls-3%7Bstroke:%231d518d;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;%7D%3C/style%3E%3CclipPath id='clip-path'%3E%3Crect class='cls-1' width='24' height='24'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='Livello_2' data-name='Livello 2'%3E%3Cg id='Livello_1-2' data-name='Livello 1'%3E%3Cg class='cls-2'%3E%3Cpath class='cls-3' d='M8,13H8'/%3E%3Cpath class='cls-3' d='M12,17h0'/%3E%3Cpath class='cls-3' d='M12,12h0'/%3E%3Cpath class='cls-3' d='M16,14h0'/%3E%3Cpath class='cls-3' d='M11,8h0'/%3E%3Cpath class='cls-3' d='M13.15,3.48l2.67,1.1a4,4,0,0,0,4.65,6.14l.05.13a3,3,0,0,1,0,2.3,14.07,14.07,0,0,0-1,1.85,16.5,16.5,0,0,0-.66,2.22,3,3,0,0,1-1.62,1.62A17.19,17.19,0,0,0,15,19.5a13.89,13.89,0,0,0-1.85,1,3,3,0,0,1-2.3,0A14.24,14.24,0,0,0,9,19.5a15,15,0,0,0-2.22-.66,3,3,0,0,1-1.62-1.62A16.69,16.69,0,0,0,4.5,15a12.75,12.75,0,0,0-1-1.85,3,3,0,0,1,0-2.3A11.78,11.78,0,0,0,4.5,9a18.52,18.52,0,0,0,.66-2.22A3.06,3.06,0,0,1,6.78,5.16,18.86,18.86,0,0,0,9,4.5a12.9,12.9,0,0,0,1.85-1A3,3,0,0,1,13.15,3.48Z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");      }
+    }
+    &.--libri {
+      &:after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 24 24'%3E%3Cdefs%3E%3Cstyle%3E.cls-1,.cls-3%7Bfill:none;%7D.cls-2%7Bclip-path:url(%23clip-path);%7D.cls-3%7Bstroke:%231d518d;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;%7D%3C/style%3E%3CclipPath id='clip-path'%3E%3Crect class='cls-1' width='24' height='24'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='Livello_2' data-name='Livello 2'%3E%3Cg id='Livello_1-2' data-name='Livello 1'%3E%3Cg class='cls-2'%3E%3Cpath class='cls-3' d='M5,5A1,1,0,0,1,6,4H8A1,1,0,0,1,9,5V19a1,1,0,0,1-1,1H6a1,1,0,0,1-1-1Z'/%3E%3Cpath class='cls-3' d='M9,5a1,1,0,0,1,1-1h2a1,1,0,0,1,1,1V19a1,1,0,0,1-1,1H10a1,1,0,0,1-1-1Z'/%3E%3Cpath class='cls-3' d='M5,8H9'/%3E%3Cpath class='cls-3' d='M9,16h4'/%3E%3Cpath class='cls-3' d='M13.8,4.56,16,4a1.07,1.07,0,0,1,1.28.73L21,18.18a1,1,0,0,1-.08.73,1,1,0,0,1-.55.49l-.13,0L18,20a1.06,1.06,0,0,1-1.28-.73L13,5.82a1,1,0,0,1,.63-1.22Z'/%3E%3Cpath class='cls-3' d='M14,9l4-1'/%3E%3Cpath class='cls-3' d='M16,16l3.92-1'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");      }
+    }
+    &.--peluche {
+      &:after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 19.5'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;stroke:%231d518d;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;%7D%3C/style%3E%3C/defs%3E%3Cg id='Livello_2' data-name='Livello 2'%3E%3Cg id='Livello_1-2' data-name='Livello 1'%3E%3Cpath class='cls-1' d='M1.25,15.25q8.5,7,17,0'/%3E%3Cpath class='cls-1' d='M16.75,16.25l-2-8.5,1-2,2,1,1.5-1.5L16.75.75c-5.05.22-6,3.13-7,6h-6a3,3,0,0,0-3,3'/%3E%3Cpath class='cls-1' d='M2.75,16.25l2-9.5'/%3E%3Cpath class='cls-1' d='M5.75,17.75l2-5h4l2,5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");      }
+    }
+    &.--profumi {
+      &:after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 24 24'%3E%3Cdefs%3E%3Cstyle%3E.cls-1,.cls-3%7Bfill:none;%7D.cls-2%7Bclip-path:url(%23clip-path);%7D.cls-3%7Bstroke:%231d518d;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;%7D%3C/style%3E%3CclipPath id='clip-path'%3E%3Crect class='cls-1' width='24' height='24'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='Livello_2' data-name='Livello 2'%3E%3Cg id='Livello_1-2' data-name='Livello 1'%3E%3Cg class='cls-2'%3E%3Cpath class='cls-3' d='M10,6V9'/%3E%3Cpath class='cls-3' d='M14,6V9'/%3E%3Cpath class='cls-3' d='M5,11A2,2,0,0,1,7,9H17a2,2,0,0,1,2,2v8a2,2,0,0,1-2,2H7a2,2,0,0,1-2-2Z'/%3E%3Cpath class='cls-3' d='M10,15a2,2,0,1,0,.59-1.41A2,2,0,0,0,10,15Z'/%3E%3Cpath class='cls-3' d='M9,3h6V6H9Z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");      }
+    }
+    &.--souvenir {
+      &:after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19.5 19.5'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;stroke:%231d518d;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;%7D%3C/style%3E%3C/defs%3E%3Cg id='Livello_2' data-name='Livello 2'%3E%3Cg id='Livello_1-2' data-name='Livello 1'%3E%3Cpath class='cls-1' d='M.75,6.75A1.05,1.05,0,0,1,1,6a1,1,0,0,1,.71-.29h16a1,1,0,0,1,.71.29,1.05,1.05,0,0,1,.29.71v2a1,1,0,0,1-.29.71,1,1,0,0,1-.71.29h-16A1,1,0,0,1,1,9.46a1,1,0,0,1-.29-.71Z'/%3E%3Cpath class='cls-1' d='M9.75,5.75v13'/%3E%3Cpath class='cls-1' d='M16.75,9.75v7a2,2,0,0,1-2,2h-10a2,2,0,0,1-2-2v-7'/%3E%3Cpath class='cls-1' d='M5.25,5.75a2.5,2.5,0,1,1,0-5A3.59,3.59,0,0,1,8,2.09,8.43,8.43,0,0,1,9.75,5.75a8.43,8.43,0,0,1,1.79-3.66A3.59,3.59,0,0,1,14.25.75a2.5,2.5,0,1,1,0,5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");      }
+    }
+    &.--tabacchi {
+      &:after {
+        width: calc(100% - 15px);
+        height: calc(100% - 15px);
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18.5 20'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;stroke:%231d518d;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;%7D%3C/style%3E%3C/defs%3E%3Cg id='Livello_2' data-name='Livello 2'%3E%3Cg id='Livello_1-2' data-name='Livello 1'%3E%3Cpath class='cls-1' d='M17.75.75v5h-5.5v13.5h-6V5.75H.75v-5h17Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");      }
+    }
+
+  }
+  &__col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 30px;
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+    }
+  }
+  &__products {
+    margin-left: 0;
+    padding-left: 0;
+    &:nth-of-type(2) {
+      @include media-breakpoint-up(md) {
+        padding-left: 10%;
+      }
+    }
+  }
+  &__product {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    &:not(:last-of-type) {
+      margin-bottom: 15px;
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__productTitle {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    color: $gnv-white;
+    font-weight: 700;
+    margin-bottom:0;
+  }
+  &__productDescription {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: $gnv-white;
+  }
+
+  &__productCol:nth-of-type(2) {
+    margin-left: 10px;
+    display: flex;
+    flex-direction:column;
+  }
+}
