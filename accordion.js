@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const defaultOpenIndex = 5; // Imposta l'indice dell'elemento da aprire all'avvio
+    const defaultOpenIndex = 0; // Imposta l'indice dell'elemento da aprire all'avvio
 
     const buttons = document.querySelectorAll('.mYaccordion-button');
     const items = document.querySelectorAll('.mYaccordion-item');
