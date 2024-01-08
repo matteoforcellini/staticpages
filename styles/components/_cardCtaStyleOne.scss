@@ -6,7 +6,7 @@
   background-repeat: no-repeat;
   @include media-breakpoint-up(lg) {
     background-color: $gnv-white;
-    background-image: url('assets/cta_style_one_bg.png');
+    background-image: url('public/cta_style_one_bg.png');
     border-radius: 12px;
     padding: 20px;
     background-size: cover;

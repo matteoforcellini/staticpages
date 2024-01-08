@@ -1,7 +1,7 @@
 $iconInnerMargin: 10px; // If you change this, change manually tabacchi icon as well
 
 .cardCtaStyleTwo {
-  background-image: url('assets/bg_card_cta_style_two_people.png'), linear-gradient(0deg, #004d8c 0%, #0078bb 9%, #0376ba 18%, #0372b6 28.000000000000004%, #006fb1 37%, #0264a6 51%, #0376ba 64%, #0075b8 75%, #0260a2 88%, #005090 100%);
+  background-image: url('public/tablet-mobile-illustration-people@3x.png'), linear-gradient(0deg, #004d8c 0%, #0078bb 9%, #0376ba 18%, #0372b6 28.000000000000004%, #006fb1 37%, #0264a6 51%, #0376ba 64%, #0075b8 75%, #0260a2 88%, #005090 100%);
   background-repeat: no-repeat;
   background-position: bottom right;
   width: 100%;
@@ -9,22 +9,28 @@ $iconInnerMargin: 10px; // If you change this, change manually tabacchi icon as 
   position: relative;
   overflow: hidden;
   padding: 20px 12px 10px;
+  background-size: 40%, auto;
+  @include media-breakpoint-up(md) {
+    background-size: 30%, auto;
+  }
   @include media-breakpoint-up(lg) {
+    background-image: url('public/illustration-people@3x.png'), linear-gradient(0deg, #004d8c 0%, #0078bb 9%, #0376ba 18%, #0372b6 28.000000000000004%, #006fb1 37%, #0264a6 51%, #0376ba 64%, #0075b8 75%, #0260a2 88%, #005090 100%);
     padding: 30px 30px 15px;
-    background-size: 28%, auto;
+    background-size: 20%, auto;
   }
   &:after {
     content: "";
     top:0;
     left: 0;
     position: absolute;
-    background-image: url('assets/bg_card_cta_style_two_shop.png');
+    background-image: url('public/tablet-mobile-illustration-shop@3x.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top left;
     height: 120px;
     width: 120px;
     @include media-breakpoint-up(lg) {
+      background-image: url('public/illustration-shop@3x.png');
       height: 235px;
       width: 235px;
     }
