@@ -1,5 +1,8 @@
-.headerBanner {
-  &__breadcrumb {
-    padding-left: 2.3rem;
+#headerBanner {
+  .headerBanner {
+    &__breadcrumb {
+      padding-left: 2.3rem;
+    }
   }
 }
+
